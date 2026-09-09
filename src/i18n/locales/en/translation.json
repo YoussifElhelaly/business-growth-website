@@ -1,0 +1,236 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "contact": "Contact",
+    "bookConsult": "Book a Consultation",
+    "menu": "Menu",
+    "languageSwitch": "العربية"
+  },
+  "footer": {
+    "servicesTitle": "Services",
+    "companyTitle": "Company",
+    "contactTitle": "Contact",
+    "companyLinks": ["About Us", "Our Team", "Blog", "FAQ", "Privacy Policy"],
+    "rights": "All rights reserved.",
+    "crLine": "CR 1009000000 · Riyadh, Saudi Arabia"
+  },
+  "fab": { "whatsapp": "WhatsApp" },
+  "common": {
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "e.g. Abdullah Al-Harbi",
+    "phone": "Mobile Number",
+    "phonePlaceholder": "05X XXX XXXX",
+    "email": "Email",
+    "emailPlaceholder": "name@example.com",
+    "service": "Service Needed",
+    "servicePlaceholder": "Choose a service",
+    "notes": "Additional Details",
+    "notesPlaceholder": "Give us a brief overview of your request so we can prepare for the call",
+    "send": "Send",
+    "sending": "Sending…",
+    "close": "Close",
+    "cancel": "Cancel",
+    "requestServiceDialogTitle": "Service Request — {{service}}",
+    "requestDetails": "Request Details",
+    "requestDetailsPlaceholder": "Write a short summary…",
+    "sendRequest": "Send Request",
+    "requestReceivedTitle": "We've received your request",
+    "requestReceivedBody": "One of our advisors will reach out within one business day.",
+    "sendAnotherRequest": "Send another request",
+    "requestService": "Request this service",
+    "check": "Check"
+  },
+  "home": {
+    "hero": {
+      "kicker": "Licensed Advisory Office · Riyadh",
+      "titleLine1": "We form your company in Saudi Arabia",
+      "titleLine2": "and stay with it after that",
+      "lead": "Company formation, foreign investment licensing, legal and accounting consulting. One clear path from the first meeting to the issued commercial registration.",
+      "ctaPrimary": "Book a Free Diagnostic Session",
+      "ctaSecondary": "Explore Our Services"
+    },
+    "who": {
+      "kicker": "About Us",
+      "title": "We're not a middleman for paperwork — we're accountable for the outcome",
+      "lead": "A team of licensed lawyers and chartered accountants working with entrepreneurs and investors from outside the Kingdom for fourteen years. We start with a diagnostic session, then a written quote, then execution against a published timeline.",
+      "cta": "More About the Office"
+    },
+    "services": {
+      "kicker": "Our Services",
+      "title": "Services that cover the full lifecycle of your company",
+      "lead": "From reserving the trade name to the annual compliance program. Every service has a written scope and a published timeline."
+    },
+    "why": {
+      "kicker": "Why Us",
+      "title": "Experience trust is built on",
+      "lead": "We're not just an advisory office — we're a partner that follows through with you at every step, with transparency and regulatory precision."
+    },
+    "process": {
+      "kicker": "How We Work",
+      "title": "Four steps, no surprises in between"
+    },
+    "team": {
+      "kicker": "Our Team",
+      "title": "Who will handle your file",
+      "cta": "Meet the Full Team"
+    },
+    "articles": {
+      "kicker": "Blog",
+      "title": "Articles that explain regulations in plain language",
+      "cta": "All Articles"
+    },
+    "contactSection": {
+      "kicker": "Contact Us",
+      "title": "Let's start building the next step",
+      "infoTitle": "Contact Details",
+      "formTitle": "Book Your Consultation",
+      "formLead": "Fill in the form and we'll get back to you within one business day.",
+      "disclaimer": "By submitting this form, you agree to us contacting you about your request.",
+      "submit": "Send & Book Consultation",
+      "rows": {
+        "call": "Call Us",
+        "email": "Email Us",
+        "location": "Our Location",
+        "hours": "Working Hours"
+      }
+    },
+    "gallery": {
+      "kicker": "Inside the Office",
+      "title": "A place we welcome clients into, not a mailbox address",
+      "lead": "Our office is on King Fahd Road, Riyadh. The first meeting is free, and can be in person or remote.",
+      "labels": ["The Office", "Workspace", "Meeting Room", "Reception", "Second Floor"]
+    },
+    "clientWall": {
+      "kicker": "Our References",
+      "title": "Over 100 companies started with us in 2025",
+      "ratingSuffix": "/ 5 average client rating"
+    },
+    "cta": {
+      "title": "The first diagnostic session is free",
+      "lead": "Tell us about your activity and ownership structure, and we'll send you the regulatory path and a written quote within one business day.",
+      "cta": "Book the Session",
+      "whatsapp": "Chat on WhatsApp"
+    },
+    "faq": {
+      "kicker": "FAQ",
+      "title": "Questions our clients ask all the time",
+      "cta": "View All Questions"
+    }
+  },
+  "about": {
+    "pageHead": {
+      "kicker": "About Us",
+      "title": "Fourteen years in Saudi commercial registrations",
+      "lead": "A legal and accounting advisory office in Riyadh, working with local companies and investors from outside the Kingdom."
+    },
+    "story": {
+      "kicker": "Our Story",
+      "title": "We started with a single file, and we still work the same way",
+      "lead": "The office was founded in 2012 to serve business owners who found regulatory procedures more complicated than they should be. The principle hasn't changed: a written scope of work, a published timeline, and one point of contact who owns the file from start to finish.",
+      "paragraph": "Today we serve more than twelve sectors, and deal with government entities both electronically and in person. The largest share of our clients return to us for compliance and accounting services after formation — and that's the measure we hold ourselves to.",
+      "ctaPrimary": "Talk to Us",
+      "ctaSecondary": "Services"
+    },
+    "values": {
+      "kicker": "Our Values",
+      "title": "Four principles we refuse to compromise on"
+    },
+    "team": {
+      "kicker": "Our Team",
+      "title": "Names and faces, not mailboxes",
+      "lead": "Every file is assigned to one named point of contact, and you can reach them directly."
+    }
+  },
+  "services": {
+    "pageHead": {
+      "kicker": "Our Services",
+      "title": "Written scope, published timeline, fixed fees",
+      "lead": "Six core services covering the full lifecycle of your company, from reserving the trade name to the annual compliance program."
+    },
+    "row": { "badge": "Service" },
+    "sectors": {
+      "kicker": "Sectors",
+      "title": "Sectors where we have prior track record"
+    },
+    "fees": {
+      "kicker": "Fees",
+      "title": "How we determine our fees",
+      "points": [
+        "A free initial diagnostic session, with no obligation.",
+        "A written quote defining the scope, timeline, and exclusions.",
+        "Government fees are listed separately and paid directly to the authorities.",
+        "No additional charges after signing unless the scope changes in writing."
+      ],
+      "cta": "Request a Quote"
+    }
+  },
+  "faq": {
+    "pageHead": {
+      "kicker": "FAQ",
+      "title": "Questions we hear every week",
+      "lead": "If you don't find your question, send it to us and we'll answer within one business day."
+    },
+    "categoriesTitle": "Categories",
+    "resultCount": "{{count}} questions in this category",
+    "askBox": {
+      "title": "Can't find your question?",
+      "lead": "Ask us directly — the answer comes from a licensed attorney.",
+      "cta": "Send Your Question"
+    },
+    "cta": {
+      "title": "Still have a regulatory question?",
+      "lead": "The first session is free, and ends with a clear, written path even if you don't continue with us.",
+      "cta": "Book a Session"
+    }
+  },
+  "blog": {
+    "pageHead": {
+      "kicker": "Blog",
+      "title": "Saudi regulations, explained in plain language",
+      "lead": "Short articles written by the office's team about formation, foreign investment, and taxes."
+    },
+    "readArticle": "Read Article",
+    "newsletter": {
+      "kicker": "Newsletter",
+      "title": "One article every two weeks, no ads",
+      "cta": "Subscribe to the Newsletter"
+    }
+  },
+  "contact": {
+    "pageHead": {
+      "kicker": "Contact Us",
+      "title": "The first diagnostic session is free",
+      "lead": "Send us the basic details, and we'll get back to you with a regulatory path and a written quote within one business day."
+    },
+    "form": {
+      "kicker": "Request Form",
+      "title": "Tell us what you need",
+      "notesLabel": "Request Details",
+      "notesPlaceholder": "Activity, number of partners, nationalities, and any timeline…",
+      "notesHint": "We don't share your data with any third party.",
+      "submit": "Send Request",
+      "successTitle": "We've received your request",
+      "successBody": "One of our advisors will reach out within one business day on the number you provided.",
+      "successRetry": "Send another request"
+    },
+    "officeTitle": "Office Details",
+    "rows": {
+      "address": "Address",
+      "phone": "Phone",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "hours": "Working Hours"
+    },
+    "callButton": "Call",
+    "whatsappButton": "WhatsApp",
+    "parkingNote": "Free visitor parking on the ground floor. An appointment is recommended."
+  },
+  "loading": {
+    "title": "Preparing the site",
+    "subtitle": "One moment while we load the content…"
+  }
+}
