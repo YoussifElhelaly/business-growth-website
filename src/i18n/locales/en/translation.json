@@ -12,11 +12,18 @@
   },
   "footer": {
     "servicesTitle": "Services",
-    "companyTitle": "Company",
+    "companyTitle": "Links",
     "contactTitle": "Contact",
-    "companyLinks": ["About Us", "Our Team", "Blog", "FAQ", "Privacy Policy"],
-    "rights": "All rights reserved.",
-    "crLine": "CR 1009000000 · Riyadh, Saudi Arabia"
+    "companyLinks": ["About Us", "Why Us", "How We Work", "FAQ"],
+    "shortAddress": "Riyadh, Saudi Arabia",
+    "rights": "All rights reserved",
+    "credits": [
+      { "label": "CR Number", "value": "1009000000" },
+      { "label": "VAT Number", "value": "310090000000003" },
+      { "label": "National Address", "value": "7512 — Riyadh" }
+    ],
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions"
   },
   "fab": { "whatsapp": "WhatsApp" },
   "common": {
@@ -114,18 +121,25 @@
     "contactSection": {
       "kicker": "Start Now",
       "title": "Submit Your Request",
-      "infoTitle": "Contact Details",
-      "formTitle": "Submit Your Request",
       "formLead": "You don't need to know every procedure before reaching out. Send us your current situation and what you want to achieve, and we'll define the closest path to your need.",
-      "disclaimer": "By submitting this form, you agree to us contacting you about your request.",
       "submit": "Send Your Request",
       "askTitle": "What do we need from you?",
       "askBody": "Your activity type, nationality, current situation, and the goal you want to reach.",
+      "orContact": "Or reach us directly:",
+      "profileLabel": "You are a",
+      "profiles": ["Foreign investor", "Gulf investor", "Saudi entrepreneur", "Existing company owner"],
+      "noteLabel": "Tell us about your project",
+      "notePlaceholder": "Activity type, your current situation, and what you want to achieve"
+    },
+    "location": {
+      "kicker": "Our Location",
+      "title": "Come visit us",
+      "cta": "Get Directions",
       "rows": {
-        "call": "Call Us",
-        "email": "Email Us",
-        "location": "Our Location",
-        "hours": "Working Hours"
+        "address": "Address",
+        "hours": "Working Hours",
+        "phone": "Phone",
+        "email": "Email"
       }
     },
     "gallery": {

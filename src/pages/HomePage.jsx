@@ -11,77 +11,68 @@ import { ClientWall } from "../components/site/ClientWall.jsx";
 import { CTABand } from "../components/site/CTABand.jsx";
 import { FaqAccordion } from "../components/site/FaqAccordion.jsx";
 
+function HomeLocation() {
+  const { t } = useTranslation();
+  const { content } = useSiteContent();
+  const rows = [
+    { label: t("home.location.rows.address"), value: content.contact.address },
+    { label: t("home.location.rows.hours"), value: content.contact.hours },
+    { label: t("home.location.rows.phone"), value: content.contact.phone },
+    { label: t("home.location.rows.email"), value: content.contact.email },
+  ];
+  return (
+    <section className="sec">
+      <div className="wrap">
+        <div className="r-split grid items-center gap-[clamp(36px,5vw,48px)]" style={{ gridTemplateColumns: ".9fr 1.1fr" }}>
+          <div>
+            <SectionHead kicker={t("home.location.kicker")} title={t("home.location.title")} />
+            <ul className="mb-7 mt-[22px] flex list-none flex-col p-0">
+              {rows.map((r, i) => (
+                <li key={i} className="flex gap-4 border-b border-border-subtle py-[13px] text-[15px]">
+                  <span className="w-[92px] shrink-0 font-bold text-copper">{r.label}</span>
+                  <span className={`leading-[1.7] text-text-body ${i === 2 ? "num" : ""}`}>{r.value}</span>
+                </li>
+              ))}
+            </ul>
+            <a
+              className="inline-flex items-center justify-center bg-navy px-[26px] py-[13px] font-display text-[14.5px] font-bold text-white transition-colors duration-base hover:bg-navy-700"
+              href="https://maps.google.com/?q=King+Fahd+Road+Olaya+Riyadh"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t("home.location.cta")}
+            </a>
+          </div>
+          <div className="group overflow-hidden border border-border-subtle" style={{ lineHeight: 0 }}>
+            <iframe
+              title="موقع المكتب على الخريطة"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="block h-[420px] w-full border-0 [filter:grayscale(.35)] transition-[filter] duration-[400ms] ease-out group-hover:[filter:grayscale(0)]"
+              src="https://www.google.com/maps?q=King%20Fahd%20Road,%20Olaya,%20Riyadh&output=embed"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function HomeContact() {
   const { t } = useTranslation();
   const { content } = useSiteContent();
-  const [form, setForm] = useState({ name: "", phone: "", email: "", service: "", note: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", profile: "", service: "", note: "" });
   const mutation = useSubmitConsultationRequest();
   const set = (key) => (value) => setForm((f) => ({ ...f, [key]: value }));
-
-  const rows = [
-    { icon: "phone", label: t("home.contactSection.rows.call"), value: content.contact.phone },
-    { icon: "mail", label: t("home.contactSection.rows.email"), value: content.contact.email },
-    { icon: "map-pin", label: t("home.contactSection.rows.location"), value: content.contact.address },
-    { icon: "clock", label: t("home.contactSection.rows.hours"), value: content.contact.hours },
-  ];
+  const profiles = t("home.contactSection.profiles", { returnObjects: true });
 
   return (
-    <section className="sec bg-sand">
-      <div className="wrap">
-        <span className="eyebrow">{t("home.contactSection.kicker")}</span>
-        <h2 className="h2 mt-4">{t("home.contactSection.title")}</h2>
-        <div
-          className="r-split mt-11 grid items-stretch overflow-hidden shadow-[0_30px_70px_-40px_rgba(23,28,40,.45)]"
-          style={{ gridTemplateColumns: ".85fr 1.15fr" }}
-        >
-          <div
-            className="text-text-on-dark"
-            style={{ padding: "clamp(30px,3vw,42px)", background: "linear-gradient(215deg, var(--signup-2) 0%, var(--signup) 55%, #5e2d12 100%)" }}
-          >
-            <h3 className="font-display text-2xl font-bold text-text-on-dark">{t("home.contactSection.infoTitle")}</h3>
-            <div className="mt-7 flex flex-col gap-[22px]">
-              {rows.map((r, i) => (
-                <div key={i} className="flex items-start gap-[14px]">
-                  <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center bg-[rgba(255,217,168,.18)] text-[#ffd9a8]">
-                    <Icon name={r.icon} size={18} />
-                  </span>
-                  <div>
-                    <div className="text-xs tracking-[.08em] text-[rgba(240,221,204,.9)]">{r.label}</div>
-                    <div className={`mt-[5px] text-[15px] leading-[1.7] text-text-on-dark ${i < 2 ? "num" : ""}`}>{r.value}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="mt-6 border border-white/25 bg-white/10 px-6 py-5 text-[15px] leading-[1.8] text-white">
-              <b className="mb-1 block font-bold text-[#ffd9a8]">{t("home.contactSection.askTitle")}</b>
-              {t("home.contactSection.askBody")}
-            </div>
-            <div className="mt-6 overflow-hidden border border-white/[.16]">
-              <iframe
-                title="موقع المكتب"
-                loading="lazy"
-                className="block h-[180px] w-full border-0"
-                src="https://www.google.com/maps?q=King+Fahd+Road+Al+Olaya+Riyadh&hl=ar&output=embed"
-              />
-            </div>
-            <div className="mt-6 flex gap-[10px]">
-              {["instagram", "linkedin", "twitter"].map((n) => (
-                <a
-                  key={n}
-                  href="#"
-                  aria-label={n}
-                  className="flex h-[38px] w-[38px] items-center justify-center rounded-pill border border-white/20 text-text-on-dark-muted"
-                >
-                  <Icon name={n} size={16} />
-                </a>
-              ))}
-            </div>
-          </div>
-          <div className="bg-parchment" style={{ padding: "clamp(30px,3vw,44px)" }}>
-            <h3 className="font-display text-2xl font-bold text-text-strong">{t("home.contactSection.formTitle")}</h3>
-            <p className="mt-[10px] text-[15px] leading-[1.8] text-text-muted">{t("home.contactSection.formLead")}</p>
+    <section className="sec" style={{ background: "linear-gradient(215deg, var(--signup-2) 0%, var(--signup) 55%, #5e2d12 100%)" }}>
+      <div className="wrap on-dark">
+        <div className="r-split grid items-start gap-[clamp(40px,6vw,80px)]" style={{ gridTemplateColumns: "1fr 1fr" }}>
+          <div className="bg-parchment" style={{ padding: "clamp(30px,3vw,42px)" }}>
             {mutation.isSuccess ? (
-              <div className="mt-7 border-t-2 border-green bg-sand px-6 py-[26px]">
+              <div className="border-t-2 border-green bg-sand px-6 py-[26px]">
                 <h4 className="h4">{t("common.requestReceivedTitle")}</h4>
                 <p className="mt-2 text-[15px] leading-[1.85] text-text-muted">{t("common.requestReceivedBody")}</p>
                 <div className="mt-[18px]">
@@ -91,13 +82,14 @@ function HomeContact() {
                 </div>
               </div>
             ) : (
-              <div className="mt-[26px] flex flex-col gap-[18px]">
+              <div className="flex flex-col gap-[18px]">
+                <Input label={t("common.fullName")} placeholder={t("common.fullNamePlaceholder")} value={form.name} onChange={set("name")} required />
                 <div className="r-g2 grid grid-cols-2 gap-[18px]">
-                  <Input label={t("common.fullName")} placeholder={t("common.fullNamePlaceholder")} value={form.name} onChange={set("name")} required />
+                  <Input label={t("common.email")} type="email" placeholder={t("common.emailPlaceholder")} value={form.email} onChange={set("email")} required />
                   <Input label={t("common.phone")} type="tel" placeholder={t("common.phonePlaceholder")} value={form.phone} onChange={set("phone")} required />
                 </div>
                 <div className="r-g2 grid grid-cols-2 gap-[18px]">
-                  <Input label={t("common.email")} type="email" placeholder={t("common.emailPlaceholder")} value={form.email} onChange={set("email")} />
+                  <Select label={t("home.contactSection.profileLabel")} options={profiles} value={form.profile} onChange={set("profile")} />
                   <Select
                     label={t("common.service")}
                     options={content.services.map((s) => s.title)}
@@ -106,13 +98,28 @@ function HomeContact() {
                     placeholder={t("common.servicePlaceholder")}
                   />
                 </div>
-                <Textarea label={t("common.notes")} rows={4} placeholder={t("common.notesPlaceholder")} value={form.note} onChange={set("note")} />
+                <Textarea label={t("home.contactSection.noteLabel")} rows={4} placeholder={t("home.contactSection.notePlaceholder")} value={form.note} onChange={set("note")} />
                 <Button size="lg" variant="accent" fullWidth disabled={mutation.isPending} onClick={() => mutation.mutate(form)}>
                   {mutation.isPending ? t("common.sending") : t("home.contactSection.submit")}
                 </Button>
-                <p className="small text-center">{t("home.contactSection.disclaimer")}</p>
               </div>
             )}
+          </div>
+
+          <div className="text-text-on-dark">
+            <span className="eyebrow" style={{ color: "#ffd9a8" }}>
+              {t("home.contactSection.kicker")}
+            </span>
+            <h2 className="h2 mt-[14px] text-text-on-dark">{t("home.contactSection.title")}</h2>
+            <p className="lead mt-3">{t("home.contactSection.formLead")}</p>
+            <div className="mt-6 border border-white/25 bg-white/10 px-6 py-5 text-[15px] leading-[1.8] text-white">
+              <b className="mb-1 block font-bold text-[#ffd9a8]">{t("home.contactSection.askTitle")}</b>
+              {t("home.contactSection.askBody")}
+            </div>
+            <p className="mt-[26px] text-[15px] text-text-on-dark-muted">{t("home.contactSection.orContact")}</p>
+            <div className="num mt-2 font-display text-[34px] font-bold leading-none text-text-on-dark" style={{ letterSpacing: ".5px" }}>
+              {content.contact.phone}
+            </div>
           </div>
         </div>
       </div>
@@ -673,6 +680,8 @@ export function HomePage() {
       </section>
 
       <HomeFaq />
+
+      <HomeLocation />
 
       <HomeContact />
       <CTABand />
