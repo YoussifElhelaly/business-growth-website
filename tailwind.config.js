@@ -76,15 +76,20 @@ export default {
         },
       },
       fontFamily: {
-        display: ["Montserrat", "Noto Sans Arabic", "system-ui", "sans-serif"],
-        body: ["Montserrat", "Noto Sans Arabic", "system-ui", "sans-serif"],
+        display: ["Tajawal", "system-ui", "sans-serif"],
+        body: ["Tajawal", "system-ui", "sans-serif"],
       },
       borderRadius: {
+        none: "0px",
+        DEFAULT: "0px",
         xs: "var(--radius-xs)",
         sm: "var(--radius-sm)",
         md: "var(--radius-md)",
         lg: "var(--radius-lg)",
         xl: "var(--radius-xl)",
+        "2xl": "0px",
+        "3xl": "0px",
+        full: "0px",
         pill: "var(--radius-pill)",
       },
       boxShadow: {

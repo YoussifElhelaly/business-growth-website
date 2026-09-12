@@ -46,28 +46,55 @@
   },
   "home": {
     "hero": {
-      "kicker": "Licensed Advisory Office · Riyadh",
-      "titleLine1": "We form your company in Saudi Arabia",
-      "titleLine2": "and stay with it after that",
-      "lead": "Company formation, foreign investment licensing, legal and accounting consulting. One clear path from the first meeting to the issued commercial registration.",
-      "ctaPrimary": "Book a Free Diagnostic Session",
-      "ctaSecondary": "Explore Our Services"
+      "kicker": "Company formation, licensing and contracts in Saudi Arabia",
+      "titleLine1": "Leave the paperwork to us",
+      "titleLine2": "and focus on your business",
+      "lead": "Formation, licensing, contracts, and compliance — we handle them in full before the relevant authorities, on a clear path with known cost and timeline from day one. You build your project; we handle the regulatory road around it.",
+      "ctaPrimary": "Book Your Free Consultation",
+      "ctaSecondary": "Discover Our Services"
+    },
+    "pillars": {
+      "kicker": "Our Pillars",
+      "title": "Three pillars we build every file on"
+    },
+    "logos": {
+      "lead": "Companies and investors who started with us"
     },
     "who": {
       "kicker": "About Us",
-      "title": "We're not a middleman for paperwork — we're accountable for the outcome",
-      "lead": "A team of licensed lawyers and chartered accountants working with entrepreneurs and investors from outside the Kingdom for fourteen years. We start with a diagnostic session, then a written quote, then execution against a published timeline.",
+      "title": "Regulatory expertise... with a commercial mindset",
+      "lead": "We're not a middleman for paperwork — we're accountable for the outcome.",
       "cta": "More About the Office"
+    },
+    "audience": {
+      "kicker": "Who We Work With",
+      "title": "Have an idea you want to turn into a company?",
+      "lead": "Or do you have an existing company you want to make more organized and ready to grow? We start from your current situation and define what you actually need — and what you don't."
+    },
+    "risk": {
+      "kicker": "The Risks",
+      "title": "The cost of the wrong start doesn't show on day one",
+      "lead": "Formation can look like mere paperwork: a trade name, an incorporation contract, a registration, a license. But a mistake at the start shows up later — at a much higher cost."
+    },
+    "journey": {
+      "kicker": "The Path",
+      "title": "From idea to a company worth growing",
+      "lead": "One connected path, walking with you from the first question to the growth stage."
     },
     "services": {
       "kicker": "Our Services",
-      "title": "Services that cover the full lifecycle of your company",
-      "lead": "From reserving the trade name to the annual compliance program. Every service has a written scope and a published timeline."
+      "title": "What are we building for you?",
+      "lead": "Six service groups covering your company's full lifecycle — from formation to expansion.",
+      "detailsCta": "Service Details"
     },
     "why": {
       "kicker": "Why Us",
-      "title": "Experience trust is built on",
-      "lead": "We're not just an advisory office — we're a partner that follows through with you at every step, with transparency and regulatory precision."
+      "title": "Why Business Growth?",
+      "lead": "Because you don't just need someone to process a transaction — you need someone who understands the full picture."
+    },
+    "segs": {
+      "kicker": "Tailored Paths",
+      "title": "Start from the path that matches your situation"
     },
     "process": {
       "kicker": "How We Work",
@@ -80,17 +107,20 @@
     },
     "articles": {
       "kicker": "Blog",
-      "title": "Articles that explain regulations in plain language",
+      "title": "Know before you start",
+      "lead": "Practical articles explaining the regulations and procedures in plain language — so you avoid the mistakes that cost others dearly.",
       "cta": "All Articles"
     },
     "contactSection": {
-      "kicker": "Contact Us",
-      "title": "Let's start building the next step",
+      "kicker": "Start Now",
+      "title": "Submit Your Request",
       "infoTitle": "Contact Details",
-      "formTitle": "Book Your Consultation",
-      "formLead": "Fill in the form and we'll get back to you within one business day.",
+      "formTitle": "Submit Your Request",
+      "formLead": "You don't need to know every procedure before reaching out. Send us your current situation and what you want to achieve, and we'll define the closest path to your need.",
       "disclaimer": "By submitting this form, you agree to us contacting you about your request.",
-      "submit": "Send & Book Consultation",
+      "submit": "Send Your Request",
+      "askTitle": "What do we need from you?",
+      "askBody": "Your activity type, nationality, current situation, and the goal you want to reach.",
       "rows": {
         "call": "Call Us",
         "email": "Email Us",
@@ -99,15 +129,23 @@
       }
     },
     "gallery": {
-      "kicker": "Inside the Office",
-      "title": "A place we welcome clients into, not a mailbox address",
-      "lead": "Our office is on King Fahd Road, Riyadh. The first meeting is free, and can be in person or remote.",
-      "labels": ["The Office", "Workspace", "Meeting Room", "Reception", "Second Floor"]
+      "kicker": "Our Office",
+      "title": "The place your project starts from",
+      "lead": "We're not a faceless online service — we have an office in Riyadh you can visit and meet us in.",
+      "labels": ["Office Entrance", "Meeting Room", "Reception Area", "Workspace", "Second Floor"]
     },
     "clientWall": {
       "kicker": "Our References",
       "title": "Over 100 companies started with us in 2025",
       "ratingSuffix": "/ 5 average client rating"
+    },
+    "cases": {
+      "kicker": "Case Studies",
+      "title": "Don't take our word for it... ask those who worked with us",
+      "lead": "Instead of generic testimonials, we show what actually happened: the situation before, what we did, the result, and the timeline.",
+      "challengeLabel": "The Challenge",
+      "solutionLabel": "What We Did",
+      "durationUnit": "days"
     },
     "cta": {
       "title": "The first diagnostic session is free",
@@ -117,7 +155,7 @@
     },
     "faq": {
       "kicker": "FAQ",
-      "title": "Questions our clients ask all the time",
+      "title": "The questions every investor thinks about",
       "cta": "View All Questions"
     }
   },

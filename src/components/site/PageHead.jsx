@@ -6,7 +6,7 @@ export function PageHead({ title, kicker, lead, image }) {
       <Photo src={image} fill label="صورة الصفحة" />
       <div
         className="absolute inset-0"
-        style={{ background: "linear-gradient(to left,rgba(8,24,38,.9),rgba(8,24,38,.55))" }}
+        style={{ background: "linear-gradient(to left,rgba(23,28,40,.9),rgba(23,28,40,.55))" }}
       />
       <div className="wrap on-dark relative w-full" style={{ paddingBlock: "84px 56px" }}>
         <span className="eyebrow on-dark">{kicker}</span>

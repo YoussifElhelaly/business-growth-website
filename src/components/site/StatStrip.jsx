@@ -4,7 +4,7 @@ export function StatStrip({ items, overlap = true }) {
   return (
     <div className="wrap relative z-[5]" style={{ marginTop: overlap ? -72 : 0 }}>
       <div
-        className="r-strip grid grid-cols-4 bg-sand shadow-[0_24px_60px_-32px_rgba(8,24,38,.45)]"
+        className="r-strip grid grid-cols-4 bg-sand shadow-[0_24px_60px_-32px_rgba(23,28,40,.45)]"
       >
         {items.map((s, i) => (
           <Reveal key={i} delay={i * 90} className={i ? "border-s border-sand-deep" : ""} style={{ padding: "34px 30px" }}>

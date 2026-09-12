@@ -37,7 +37,10 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-40">
-      <div className={clsx("bg-navy-deep text-text-on-dark-muted text-[13px]", scrolled && "hidden")}>
+      <div
+        className="overflow-hidden bg-navy-deep text-text-on-dark-muted text-[13px] transition-[height,opacity] duration-slow ease-standard"
+        style={{ height: scrolled ? 0 : 40, opacity: scrolled ? 0 : 1 }}
+      >
         <div className="wrap flex h-10 items-center gap-7 whitespace-nowrap">
           <a href={`tel:${content?.contact.phone.replace(/\s/g, "")}`} className="inline-flex items-center gap-2 text-inherit">
             <Icon name="phone" size={14} />
@@ -63,7 +66,7 @@ export function Navbar() {
       <div
         className={clsx(
           "bg-white/95 backdrop-blur-md transition-shadow duration-base",
-          scrolled ? "border-b border-sand-deep shadow-[0_10px_30px_-22px_rgba(8,24,38,.5)]" : "border-b border-border-subtle"
+          scrolled ? "border-b border-sand-deep shadow-[0_10px_30px_-22px_rgba(23,28,40,.5)]" : "border-b border-border-subtle"
         )}
       >
         <div

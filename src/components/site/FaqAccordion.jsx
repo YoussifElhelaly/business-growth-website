@@ -15,7 +15,7 @@ export function FaqItem({ item, isOpen, onToggle, index }) {
         }}
         animate={{
           boxShadow: isOpen
-            ? "0 20px 44px -14px rgba(8,24,38,.22), 0 4px 10px rgba(8,24,38,.06)"
+            ? "0 20px 44px -14px rgba(23,28,40,.22), 0 4px 10px rgba(23,28,40,.06)"
             : "0 2px 6px rgba(10,22,38,.05)",
         }}
         transition={{ duration: 0.35, ease: [0.2, 0.6, 0.2, 1] }}
@@ -39,7 +39,7 @@ export function FaqItem({ item, isOpen, onToggle, index }) {
           <span
             className="num flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-lg font-display text-[15px] font-bold transition-colors duration-300"
             style={{
-              background: isOpen ? "rgba(37,199,122,.16)" : "var(--sand)",
+              background: isOpen ? "rgba(217,164,95,.18)" : "var(--sand)",
               color: isOpen ? "var(--green)" : "var(--text-subtle)",
             }}
           >

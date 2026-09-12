@@ -12,7 +12,7 @@ export function CTABand({ title, lead, cta }) {
       <Photo src={pictures?.cta} fill label="صورة" />
       <div
         className="absolute inset-0"
-        style={{ background: "linear-gradient(to left,rgba(8,24,38,.94),rgba(8,24,38,.7))" }}
+        style={{ background: "linear-gradient(to left,rgba(23,28,40,.94),rgba(23,28,40,.7))" }}
       />
       <div className="wrap on-dark relative flex flex-wrap items-center justify-between gap-12" style={{ paddingBlock: 96 }}>
         <div className="max-w-[600px]">

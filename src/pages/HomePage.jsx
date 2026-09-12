@@ -8,7 +8,6 @@ import { Photo } from "../components/site/Photo.jsx";
 import { HeroStage } from "../components/site/HeroStage.jsx";
 import { SectionHead } from "../components/site/SectionHead.jsx";
 import { ClientWall } from "../components/site/ClientWall.jsx";
-import { Gallery } from "../components/site/Gallery.jsx";
 import { CTABand } from "../components/site/CTABand.jsx";
 import { FaqAccordion } from "../components/site/FaqAccordion.jsx";
 
@@ -32,25 +31,32 @@ function HomeContact() {
         <span className="eyebrow">{t("home.contactSection.kicker")}</span>
         <h2 className="h2 mt-4">{t("home.contactSection.title")}</h2>
         <div
-          className="r-split mt-11 grid items-stretch overflow-hidden rounded-xl shadow-[0_30px_70px_-40px_rgba(8,24,38,.45)]"
+          className="r-split mt-11 grid items-stretch overflow-hidden shadow-[0_30px_70px_-40px_rgba(23,28,40,.45)]"
           style={{ gridTemplateColumns: ".85fr 1.15fr" }}
         >
-          <div className="bg-navy text-text-on-dark" style={{ padding: "clamp(30px,3vw,42px)" }}>
+          <div
+            className="text-text-on-dark"
+            style={{ padding: "clamp(30px,3vw,42px)", background: "linear-gradient(215deg, var(--signup-2) 0%, var(--signup) 55%, #5e2d12 100%)" }}
+          >
             <h3 className="font-display text-2xl font-bold text-text-on-dark">{t("home.contactSection.infoTitle")}</h3>
             <div className="mt-7 flex flex-col gap-[22px]">
               {rows.map((r, i) => (
                 <div key={i} className="flex items-start gap-[14px]">
-                  <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-md bg-[rgba(37,199,122,.14)] text-green">
+                  <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center bg-[rgba(255,217,168,.18)] text-[#ffd9a8]">
                     <Icon name={r.icon} size={18} />
                   </span>
                   <div>
-                    <div className="text-xs tracking-[.08em] text-[rgba(166,191,211,.9)]">{r.label}</div>
+                    <div className="text-xs tracking-[.08em] text-[rgba(240,221,204,.9)]">{r.label}</div>
                     <div className={`mt-[5px] text-[15px] leading-[1.7] text-text-on-dark ${i < 2 ? "num" : ""}`}>{r.value}</div>
                   </div>
                 </div>
               ))}
             </div>
-            <div className="mt-6 overflow-hidden rounded-md border border-white/[.16]">
+            <div className="mt-6 border border-white/25 bg-white/10 px-6 py-5 text-[15px] leading-[1.8] text-white">
+              <b className="mb-1 block font-bold text-[#ffd9a8]">{t("home.contactSection.askTitle")}</b>
+              {t("home.contactSection.askBody")}
+            </div>
+            <div className="mt-6 overflow-hidden border border-white/[.16]">
               <iframe
                 title="موقع المكتب"
                 loading="lazy"
@@ -75,7 +81,7 @@ function HomeContact() {
             <h3 className="font-display text-2xl font-bold text-text-strong">{t("home.contactSection.formTitle")}</h3>
             <p className="mt-[10px] text-[15px] leading-[1.8] text-text-muted">{t("home.contactSection.formLead")}</p>
             {mutation.isSuccess ? (
-              <div className="mt-7 rounded-md border-t-2 border-green bg-sand px-6 py-[26px]">
+              <div className="mt-7 border-t-2 border-green bg-sand px-6 py-[26px]">
                 <h4 className="h4">{t("common.requestReceivedTitle")}</h4>
                 <p className="mt-2 text-[15px] leading-[1.85] text-text-muted">{t("common.requestReceivedBody")}</p>
                 <div className="mt-[18px]">
@@ -127,59 +133,265 @@ function AnimatedStat({ value }) {
   );
 }
 
+function HomePillars() {
+  const { t } = useTranslation();
+  const { content } = useSiteContent();
+  return (
+    <section className="relative z-[6] -mt-14">
+      <div className="wrap">
+        <span className="sr-only">{t("home.pillars.title")}</span>
+        <div className="r-g3 grid grid-cols-3 gap-[26px]">
+          {content.pillars.map((p, i) => (
+            <Reveal key={i} delay={i * 90} className="bg-navy text-text-on-dark" style={{ padding: "40px 34px 36px" }}>
+              <span className="flex h-[56px] w-[56px] items-center justify-center border border-white/15 bg-white/10 text-green">
+                <Icon name={p.icon} size={25} />
+              </span>
+              <h3 className="mt-[22px] font-display text-lg font-bold text-text-on-dark">{p.title}</h3>
+              <p className="mt-[10px] text-sm leading-[1.8] text-text-on-dark-muted">{p.description}</p>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
-function HomeServiceCard({ s, i, feature }) {
+function HomeClientLogos() {
+  const { t } = useTranslation();
+  const { content } = useSiteContent();
+  return (
+    <section className="border-b border-border-subtle bg-parchment" style={{ paddingBlock: 52 }}>
+      <div className="wrap">
+        <p className="mb-8 text-center text-sm font-normal tracking-[.02em] text-text-muted">{t("home.logos.lead")}</p>
+        <div className="r-g5 grid grid-cols-5 gap-px border border-border-subtle bg-border-subtle">
+          {content.clients.slice(0, 5).map((c, i) => (
+            <div
+              key={i}
+              className="flex items-center justify-center bg-parchment px-4 py-4 text-center font-display text-[15px] font-bold text-text-subtle opacity-60 grayscale transition-[opacity,filter,color] duration-[350ms] ease-out hover:text-text-strong hover:opacity-100 hover:grayscale-0"
+            >
+              {c}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function HomeAudience() {
+  const { t } = useTranslation();
+  const { content, pictures } = useSiteContent();
+  return (
+    <section className="sec">
+      <div className="wrap">
+        <SectionHead kicker={t("home.audience.kicker")} title={t("home.audience.title")} lead={t("home.audience.lead")} max={680} />
+        <div className="r-g4 mt-12 grid grid-cols-4 gap-6">
+          {content.audience.map((a, i) => (
+            <Reveal key={i} delay={i * 80} className="h-full">
+              <div className="group h-full overflow-hidden border border-border-subtle bg-parchment transition-all duration-300 hover:-translate-y-[5px] hover:border-copper hover:shadow-[0_14px_30px_-18px_rgba(35,41,58,.42)]">
+                <Photo
+                  src={pictures.audience[i]}
+                  ratio="4/3"
+                  label={a.title}
+                  className="[filter:grayscale(.42)_contrast(1.04)] transition-[transform,filter] duration-500 ease-[cubic-bezier(.2,.7,.3,1)] group-hover:scale-[1.07] group-hover:[filter:grayscale(.12)_contrast(1.05)]"
+                />
+                <div className="px-6 py-7">
+                  <span className="flex h-11 w-11 items-center justify-center border border-border-subtle text-copper transition-colors duration-300 group-hover:border-copper">
+                    <Icon name={a.icon} size={20} />
+                  </span>
+                  <h3 className="mt-[14px] font-display text-[17px] font-bold text-text-strong">{a.title}</h3>
+                  <p className="mt-2 text-sm leading-[1.8] text-text-muted">{a.description}</p>
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function HomeRisk() {
+  const { t } = useTranslation();
+  const { content, pictures } = useSiteContent();
+  return (
+    <section className="sec relative overflow-hidden" style={{ background: "var(--navy-deep)" }}>
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: `url(${pictures.risk})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: 0.14,
+        }}
+      />
+      <div className="wrap on-dark relative z-[2]">
+        <SectionHead kicker={t("home.risk.kicker")} title={t("home.risk.title")} lead={t("home.risk.lead")} onDark max={640} />
+        <div className="r-g4 mt-14 grid grid-cols-4 gap-px bg-white/10">
+          {content.risk.items.map((r, i) => (
+            <Reveal key={i} delay={i * 55} className="px-7 py-8" style={{ background: "var(--navy-deep)" }}>
+              <h4 className="font-display text-base font-bold text-text-on-dark">{r.title}</h4>
+              <p className="mt-2 text-sm leading-[1.75] text-text-on-dark-muted">{r.description}</p>
+            </Reveal>
+          ))}
+        </div>
+        <div className="mt-11 border-s-[3px] border-green ps-6 text-lg font-medium text-text-on-dark">{content.risk.note}</div>
+      </div>
+    </section>
+  );
+}
+
+function HomeJourney() {
+  const { t } = useTranslation();
+  const { content } = useSiteContent();
+  return (
+    <section className="sand-bg" style={{ paddingBlock: "96px" }}>
+      <div className="wrap">
+        <SectionHead kicker={t("home.journey.kicker")} title={t("home.journey.title")} lead={t("home.journey.lead")} align="center" max={560} className="mx-auto" />
+        <div className="r-g6 relative mt-16 grid grid-cols-6 gap-6 text-center">
+          <div className="absolute inset-x-[8%] top-[17px] hidden h-px bg-sand-deep md:block" />
+          {content.journey.map((j, i) => {
+            const last = i === content.journey.length - 1;
+            return (
+              <Reveal key={i} delay={i * 70} className="relative">
+                <div
+                  className="relative z-[2] mx-auto flex h-[34px] w-[34px] items-center justify-center border font-display text-[13px] font-bold"
+                  style={{
+                    background: last ? "var(--navy)" : "var(--parchment)",
+                    borderColor: last ? "var(--navy)" : "var(--sand-deep)",
+                    color: last ? "#fff" : "var(--text-strong)",
+                  }}
+                >
+                  {i + 1}
+                </div>
+                <b className="mt-4 block font-display text-[15.5px] font-bold text-text-strong">{j.title}</b>
+                <span className="mt-1 block text-[13px] leading-[1.6] text-text-muted">{j.description}</span>
+              </Reveal>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function HomeServiceCard({ s, i }) {
   const navigate = useNavigate();
   const { t } = useTranslation();
   return (
-    <Reveal delay={i * 70} className={feature ? "svc-feature" : ""}>
-      <div
-        className="group flex h-full flex-col transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(8,24,38,0.12)]"
-        style={{
-          padding: feature ? "40px 38px" : "32px 30px",
-          background: feature ? "var(--navy)" : "var(--parchment)",
-          border: feature ? "1px solid var(--navy)" : "1px solid var(--border-subtle)",
-          borderRadius: "var(--radius-lg)",
-        }}
-      >
-        <span
-          className="flex shrink-0 items-center justify-center self-start transition-transform duration-500 group-hover:scale-110"
-          style={{
-            width: feature ? 54 : 52,
-            height: feature ? 54 : 52,
-            background: feature ? "var(--green)" : "var(--navy)",
-            color: feature ? "var(--navy)" : "var(--green)",
-            borderRadius: "var(--radius-md)",
-          }}
-        >
-          <Icon name={s.icon} size={feature ? 26 : 24} />
-        </span>
-        <h3
-          className="font-display font-bold leading-[1.45]"
-          style={{ marginTop: feature ? 26 : 22, fontSize: feature ? 26 : 20, color: feature ? "var(--text-on-dark)" : "var(--text-strong)" }}
-        >
-          {s.title}
-        </h3>
-        <p className="mt-3 leading-[1.85]" style={{ fontSize: feature ? 15 : 14, color: feature ? "var(--text-on-dark-muted)" : "var(--text-muted)" }}>
-          {s.description}
-        </p>
-        {feature && (
+    <Reveal delay={i * 70}>
+      <div className="group flex h-full flex-col border border-border-subtle bg-parchment transition-all duration-500 hover:-translate-y-1 hover:border-copper hover:shadow-[0_20px_40px_-18px_rgba(35,41,58,.25)]">
+        <div className="relative">
+          <Photo src={s.image} ratio="4/3" zoom label={s.title} />
+          <span
+            className="absolute inset-x-0 bottom-0 px-6 pb-4 pt-12 font-display text-lg font-bold leading-[1.3] text-white"
+            style={{ background: "linear-gradient(0deg, rgba(23,28,40,.86), transparent)" }}
+          >
+            {s.title}
+          </span>
+        </div>
+        <div className="flex flex-1 flex-col px-6 py-6">
+          <div className="flex items-center gap-3">
+            <span className="flex shrink-0 text-copper">
+              <Icon name={s.icon} size={20} />
+            </span>
+            <span className="text-[13px] font-semibold leading-[1.5] text-text-muted">{s.tag}</span>
+          </div>
+          <ul className="mt-4 flex flex-col gap-[9px]">
+            {s.items.map((it, n) => (
+              <li key={n} className="flex items-start gap-2 border-b border-border-subtle pb-[9px] text-sm text-text-body last:border-0 last:pb-0">
+                <span className="mt-[7px] h-[5px] w-[5px] shrink-0 bg-copper" />
+                {it}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4 border-t border-border-subtle pt-4 text-[13.5px] italic leading-[1.75] text-text-muted">{s.outcome}</p>
           <button
             onClick={() => navigate("/services")}
-            className="mt-auto flex items-center gap-[10px] pt-7 text-[15px] font-bold text-green transition-transform group-hover:gap-3"
+            className="mt-auto flex items-center gap-2 pt-5 text-sm font-bold text-copper-dark transition-[gap] duration-300 group-hover:gap-3"
           >
-            {t("common.requestService")} <Icon name="arrow-left" size={17} />
+            {t("home.services.detailsCta")} <Icon name="arrow-left" size={16} />
           </button>
-        )}
+        </div>
       </div>
     </Reveal>
+  );
+}
+
+function HomeSegs() {
+  const { t } = useTranslation();
+  const { content, pictures } = useSiteContent();
+  return (
+    <section className="sec">
+      <div className="wrap">
+        <SectionHead kicker={t("home.segs.kicker")} title={t("home.segs.title")} max={560} />
+        <div className="r-g3 mt-12 grid grid-cols-3 gap-6">
+          {content.segs.map((s, i) => (
+            <Reveal key={i} delay={i * 90} className="relative flex min-h-[400px] items-end overflow-hidden">
+              <Photo src={pictures.segs[i]} fill zoom />
+              <div className="absolute inset-0" style={{ background: "linear-gradient(0deg, rgba(23,28,40,.95) 8%, rgba(23,28,40,.35) 100%)" }} />
+              <div className="relative z-[2] px-7 py-8 text-text-on-dark">
+                <h3 className="font-display text-xl font-bold text-text-on-dark">{s.title}</h3>
+                <div className="mt-[10px] text-sm font-semibold text-green">{s.subtitle}</div>
+                <p className="mt-3 text-[14.5px] leading-[1.8] text-text-on-dark-muted">{s.description}</p>
+                <Link to="/contact" className="mt-4 inline-flex border-b border-green pb-[3px] text-sm font-bold text-white">
+                  {s.cta}
+                </Link>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function HomeOffice() {
+  const { t } = useTranslation();
+  const { pictures } = useSiteContent();
+  const labels = t("home.gallery.labels", { returnObjects: true });
+  const items = [
+    { photo: pictures.gallery[0], caption: labels[0], span: 2, height: 340 },
+    { photo: pictures.gallery[1], caption: labels[1], span: 1, height: 240 },
+    { photo: pictures.gallery[2], caption: labels[2], span: 1, height: 240 },
+    { photo: pictures.gallery[3], caption: labels[3], span: 2, height: 340 },
+  ];
+  return (
+    <section className="sec">
+      <div className="wrap">
+        <SectionHead kicker={t("home.gallery.kicker")} title={t("home.gallery.title")} lead={t("home.gallery.lead")} max={620} />
+        <div className="r-g4 mt-12 grid grid-cols-4 gap-6">
+          {items.map((it, i) => (
+            <Reveal key={i} delay={i * 90} style={{ gridColumn: `span ${it.span}` }}>
+              <div className="group relative overflow-hidden transition-shadow duration-500 hover:shadow-[0_24px_50px_-20px_rgba(35,41,58,.35)]">
+                <Photo
+                  src={it.photo}
+                  label={it.caption}
+                  style={{ height: it.height }}
+                  className="[filter:grayscale(.35)_contrast(1.02)] transition-[transform,filter] duration-[650ms] ease-[cubic-bezier(.2,.7,.3,1)] group-hover:scale-[1.06] group-hover:[filter:grayscale(0)_contrast(1.04)]"
+                />
+                <div
+                  className="pointer-events-none absolute inset-x-0 bottom-0 flex items-center gap-3 p-5"
+                  style={{ background: "linear-gradient(0deg, rgba(23,28,40,.8) 0%, rgba(23,28,40,0) 100%)" }}
+                >
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center bg-copper font-display text-[12px] font-bold text-white transition-transform duration-500 ease-out group-hover:scale-110">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="font-display text-[16px] font-bold text-white">{it.caption}</span>
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 
 function HomeFaq() {
   const { t } = useTranslation();
   const { content } = useSiteContent();
-  const faqs = content.faqs.slice(0, 5);
+  const faqs = content.faqs.slice(0, 8);
 
   return (
     <section className="sec bg-sand">
@@ -201,7 +413,6 @@ function HomeFaq() {
 export function HomePage() {
   const { t } = useTranslation();
   const { content, pictures } = useSiteContent();
-  const feat = content.testimonials.find((tm) => tm.featured) || content.testimonials[0];
 
   return (
     <main>
@@ -240,7 +451,7 @@ export function HomePage() {
             ))}
           </div>
           <div className="hero-stats mt-[19px] border-t border-white/20 pt-7">
-            {content.whyStats.map((st, i) => (
+            {content.heroStats.map((st, i) => (
               <div key={i}>
                 <div className="num font-display text-[36px] font-bold leading-[1.1] text-green">
                   <AnimatedStat value={st.value} />
@@ -252,7 +463,45 @@ export function HomePage() {
         </div>
       </HeroStage>
 
-      <section className="sec">
+      <HomePillars />
+
+      <HomeClientLogos />
+
+      <HomeAudience />
+
+      <HomeRisk />
+
+      <HomeJourney />
+
+      <section className="bg-parchment py-[70px]">
+        <div className="wrap" style={{ paddingBlock: "0 56px" }}>
+          <SectionHead kicker={t("home.services.kicker")} title={t("home.services.title")} lead={t("home.services.lead")} align="center" max={640} className="mx-auto" />
+        </div>
+        <div className="wrap r-g3 grid grid-cols-3 gap-6 pb-2">
+          {content.services.map((s, i) => (
+            <HomeServiceCard key={i} s={s} i={i} />
+          ))}
+        </div>
+      </section>
+
+      <section className="sec sand-bg">
+        <div className="wrap">
+          <SectionHead kicker={t("home.why.kicker")} title={t("home.why.title")} lead={t("home.why.lead")} max={640} />
+          <div className="r-g3 mt-14 grid grid-cols-3 gap-px border border-sand-deep bg-sand-deep">
+            {content.whyPoints.map((p, i) => (
+              <Reveal key={i} delay={i * 70} className="h-full">
+                <div className="group relative h-full bg-sand px-[30px] py-[34px] transition-colors duration-300 hover:bg-parchment">
+                  <span className="absolute inset-y-0 end-0 w-[3px] origin-top scale-y-0 bg-copper transition-transform duration-300 ease-out group-hover:scale-y-100" />
+                  <h3 className="font-display text-[17.5px] font-bold text-text-strong">{p.title}</h3>
+                  <p className="mt-[9px] text-[14.5px] leading-[1.8] text-text-muted">{p.description}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* <section className="sec">
         <div className="wrap r-split grid items-center gap-[clamp(40px,6vw,96px)]" style={{ gridTemplateColumns: "1fr 1.05fr" }}>
           <div className="relative pb-[74px] ps-16">
             <Photo src={pictures.about[0]} ratio="4/5" zoom label="مكتبنا" />
@@ -262,11 +511,19 @@ export function HomePage() {
             <div className="absolute top-9 end-[-1px] h-[110px] w-[2px] bg-copper" />
           </div>
           <div>
-            <SectionHead kicker={t("home.who.kicker")} title={t("home.who.title")} lead={t("home.who.lead")} />
+            <SectionHead kicker={t("home.who.kicker")} title={t("home.who.title")} />
+            <div className="mt-[18px] flex flex-col gap-4">
+              {content.about.paragraphs.map((p, i) => (
+                <p key={i} className="text-base leading-[1.9] text-text-muted">
+                  {p}
+                </p>
+              ))}
+            </div>
+            <p className="mt-1 border-s-[3px] border-copper ps-[18px] text-base font-bold leading-[1.8] text-text-strong">{content.about.closing}</p>
             <div className="r-g2 mt-9 grid grid-cols-2" style={{ gap: "28px 32px" }}>
               {content.advantages.map((a, i) => (
                 <div key={i} className="border-t border-sand-deep pt-5">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-md bg-navy text-green">
+                  <span className="flex h-11 w-11 items-center justify-center bg-navy text-green">
                     <Icon name={a.icon} size={21} />
                   </span>
                   <h4 className="h4 mt-3">{a.title}</h4>
@@ -281,54 +538,9 @@ export function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="sec navy-bg">
-        <div className="wrap r-split grid items-center gap-[clamp(40px,6vw,80px)]" style={{ gridTemplateColumns: "1fr 1fr" }}>
-          <div className="r-g2s grid grid-cols-2 gap-px bg-white/10">
-            {content.whyStats.map((s, i) => (
-              <div key={i} className="bg-navy text-center" style={{ padding: "46px 34px", borderRadius: "var(--radius-md)" }}>
-                <div className="num font-display text-[40px] font-bold leading-[1.1] text-green">
-                  <AnimatedStat value={s.value} />
-                </div>
-                <p className="mt-3 text-sm text-text-on-dark-muted">{s.label}</p>
-              </div>
-            ))}
-          </div>
-          <div className="on-dark">
-            <span className="eyebrow on-dark">{t("home.why.kicker")}</span>
-            <h2 className="h2 mt-[18px]">{t("home.why.title")}</h2>
-            <p className="lead mt-[14px]">{t("home.why.lead")}</p>
-            <div className="mt-9 flex flex-col">
-              {content.whyPoints.map((p, i) => (
-                <Reveal key={i} delay={i * 90} className={`flex items-start gap-4 py-6 ${i ? "border-t border-white/[.14]" : ""}`}>
-                  <span className="flex h-[30px] w-[30px] shrink-0 items-center justify-center rounded-full bg-[rgba(37,199,122,.16)] text-green">
-                    <Icon name="check" size={16} />
-                  </span>
-                  <div>
-                    <h4 className="h4 text-text-on-dark">{p.title}</h4>
-                    <p className="mt-2 text-sm leading-[1.85] text-text-on-dark-muted">{p.description}</p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-parchment py-[70px]">
-        <div className="wrap" style={{ paddingBlock: "0 56px" }}>
-          <SectionHead kicker={t("home.services.kicker")} title={t("home.services.title")} lead={t("home.services.lead")} max={640} />
-        </div>
-        <div className="wrap svc-grid pb-2">
-          <HomeServiceCard s={content.services[0]} i={0} feature />
-          {content.services.slice(1, 5).map((s, i) => (
-            <HomeServiceCard key={i} s={s} i={i + 1} />
-          ))}
-        </div>
-      </section>
-
-
+      <HomeSegs />
 
       <section className="navy-bg sec">
         <div className="wrap">
@@ -379,62 +591,80 @@ export function HomePage() {
         </div>
       </section>
 
-      <Gallery images={pictures.gallery} />
+      <HomeOffice />
 
-      <section className="sand-bg" style={{ paddingBlock: "96px" }}>
-        <div className="wrap r-split grid items-center gap-[clamp(40px,6vw,88px)]" style={{ gridTemplateColumns: "1.3fr 1fr" }}>
-          <div>
-            <span className="block font-display text-[88px] leading-[.6] text-copper">”</span>
-            <blockquote className="d2 mt-[18px] text-navy" style={{ fontSize: "clamp(26px,2.4vw,38px)", lineHeight: 1.5 }}>
-              {feat.quote}
-            </blockquote>
-            <div className="mt-7 flex items-center gap-[14px]">
-              <span className="h-px w-[38px] bg-copper" />
-              <div>
-                <div className="font-semibold text-text-strong">{feat.name}</div>
-                <div className="text-sm text-text-muted">
-                  {feat.role} · {feat.company}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col gap-5">
-            {content.testimonials
-              .filter((tm) => !tm.featured)
-              .map((tm, i) => (
-                <div key={i} className="rounded-lg border-t-2 border-copper bg-parchment px-[30px] py-7">
-                  <p className="text-[15px] leading-[1.9] text-text-body">{tm.quote}</p>
-                  <div className="mt-[14px] text-[13px] text-text-subtle">
-                    {tm.name} — {tm.company}
+      <section className="sec navy-bg" style={{ textAlign: "center" }}>
+        <div className="wrap on-dark">
+          <SectionHead kicker={t("home.cases.kicker")} title={t("home.cases.title")} lead={t("home.cases.lead")} align="center" max={620} className="mx-auto" onDark />
+          <div className="r-g3 mt-11 grid grid-cols-3 gap-[26px] text-start">
+            {content.cases.map((c, i) => (
+              <Reveal key={i} delay={i * 90} className="h-full">
+                <div className="group flex h-full flex-col border border-border-subtle bg-parchment transition-all duration-300 hover:-translate-y-[5px] hover:border-copper hover:shadow-[0_16px_34px_-20px_rgba(35,41,58,.45)]">
+                  <div className="relative bg-navy px-6 py-[22px]">
+                    <span className="absolute inset-x-0 top-0 h-[3px] bg-green" />
+                    <div className="text-[17px] font-bold leading-[1.5] text-text-on-dark">{c.who}</div>
+                    <div className="mt-[5px] text-[13.5px] font-medium text-green">{c.sector}</div>
+                  </div>
+                  <div className="flex flex-1 flex-col gap-[15px] p-6">
+                    <div>
+                      <span className="mb-1 block text-[12.5px] font-bold text-copper">{t("home.cases.challengeLabel")}</span>
+                      <p className="text-[14.5px] leading-[1.75] text-text-body">{c.challenge}</p>
+                    </div>
+                    <div>
+                      <span className="mb-1 block text-[12.5px] font-bold text-copper">{t("home.cases.solutionLabel")}</span>
+                      <p className="text-[14.5px] leading-[1.75] text-text-body">{c.solution}</p>
+                    </div>
+                    <div className="mt-auto flex items-center justify-between gap-3 border-t border-border-subtle pt-4">
+                      <div className="text-[14.5px] font-bold leading-[1.5] text-text-strong">{c.result}</div>
+                      <div className="num whitespace-nowrap text-end font-display text-2xl font-extrabold leading-none text-copper">
+                        {c.duration}
+                        <small className="mt-[2px] block text-center text-xs font-normal text-text-muted">{t("home.cases.durationUnit")}</small>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              ))}
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
 
-      <ClientWall />
-
-      <section className="sec">
+      <section className="sec" style={{ background: "var(--surface-brand-soft)" }}>
         <div className="wrap">
           <div className="flex flex-wrap items-end justify-between gap-10">
-            <SectionHead kicker={t("home.articles.kicker")} title={t("home.articles.title")} max={520} />
+            <SectionHead kicker={t("home.articles.kicker")} title={t("home.articles.title")} lead={t("home.articles.lead")} max={560} />
             <Button variant="secondary" size="sm" iconEnd="arrow-left" to="/blog">
               {t("home.articles.cta")}
             </Button>
           </div>
-          <div className="r-g3 mt-12 grid grid-cols-3 gap-8">
+          <div className="r-g3 mt-12 grid grid-cols-3 gap-[26px]">
             {content.articles.slice(0, 3).map((a, i) => (
-              <Reveal key={i} delay={i * 90}>
-                <Link to="/blog" className="block text-inherit">
-                  <Photo src={a.image} ratio="3/2" zoom label={a.cat} />
-                  <div className="mt-[18px] flex gap-[14px] text-xs font-semibold tracking-[.08em] text-copper-dark">
-                    <span>{a.cat}</span>
-                    <span className="font-normal text-text-subtle">{a.date}</span>
-                    <span className="font-normal text-text-subtle">{a.readTime}</span>
+              <Reveal key={i} delay={i * 90} className="h-full">
+                <Link
+                  to="/blog"
+                  className="group flex h-full flex-col border border-border-subtle bg-parchment text-inherit transition-all duration-300 hover:-translate-y-[5px] hover:border-copper hover:shadow-[0_16px_34px_-20px_rgba(35,41,58,.4)]"
+                >
+                  <Photo
+                    src={a.image}
+                    ratio="3/2"
+                    label={a.cat}
+                    className="[filter:grayscale(.35)] transition-[filter] duration-[400ms] ease-out group-hover:grayscale-0"
+                  />
+                  <div className="flex flex-1 flex-col p-6">
+                    <div className="flex gap-[14px] text-xs font-bold text-copper">
+                      <span>{a.cat}</span>
+                      <span className="font-normal text-text-muted">{a.date}</span>
+                      <span className="font-normal text-text-muted">{a.readTime}</span>
+                    </div>
+                    <h4 className="mt-[10px] font-display text-[18.5px] font-bold leading-[1.5] text-text-strong transition-colors duration-300 group-hover:text-copper">
+                      {a.title}
+                    </h4>
+                    <p className="mt-[10px] text-[14.5px] leading-[1.8] text-text-muted">{a.excerpt}</p>
+                    <span className="mt-auto flex items-center gap-2 pt-2 text-sm font-bold text-copper transition-[gap] duration-300 group-hover:gap-[13px]">
+                      {t("blog.readArticle")}
+                      <Icon name="arrow-left" size={16} />
+                    </span>
                   </div>
-                  <h4 className="mt-[10px] font-display text-[22px] leading-[1.4]">{a.title}</h4>
-                  <p className="mt-[10px] text-sm leading-[1.8] text-text-muted">{a.excerpt}</p>
                 </Link>
               </Reveal>
             ))}

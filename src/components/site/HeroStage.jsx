@@ -32,12 +32,12 @@ export function HeroStage({ images, interval = 6000, children, height = "min(88v
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to left,rgba(8,24,38,.86) 0%,rgba(8,24,38,.62) 46%,rgba(8,24,38,.30) 100%)",
+            "linear-gradient(to left,rgba(23,28,40,.86) 0%,rgba(23,28,40,.62) 46%,rgba(23,28,40,.30) 100%)",
         }}
       />
       <div
         className="absolute inset-x-0 bottom-0 h-[120px]"
-        style={{ background: "linear-gradient(to top,rgba(8,24,38,.72),transparent)" }}
+        style={{ background: "linear-gradient(to top,rgba(23,28,40,.72),transparent)" }}
       />
       <div className="absolute bottom-[104px] start-[var(--gut)] z-[6] flex gap-2">
         {images.map((_, n) => (

@@ -1,7 +1,11 @@
 import { useTranslation } from "react-i18next";
 import {
+  AlertTriangle,
   ArrowLeft,
   ArrowRight,
+  Award,
+  BarChart3,
+  Building2,
   Calculator,
   Check,
   CheckCircle,
@@ -30,9 +34,11 @@ import {
   Scale,
   ShieldCheck,
   ShoppingBag,
+  Sparkles,
   Star,
   Stethoscope,
   Target,
+  TrendingUp,
   Truck,
   Twitter,
   Users,
@@ -41,8 +47,12 @@ import {
 } from "lucide-react";
 
 const ICONS = {
+  "alert-triangle": AlertTriangle,
   "arrow-left": ArrowLeft,
   "arrow-right": ArrowRight,
+  award: Award,
+  "bar-chart": BarChart3,
+  building: Building2,
   calculator: Calculator,
   check: Check,
   "check-circle": CheckCircle,
@@ -70,9 +80,11 @@ const ICONS = {
   scale: Scale,
   "shield-check": ShieldCheck,
   "shopping-bag": ShoppingBag,
+  sparkles: Sparkles,
   star: Star,
   stethoscope: Stethoscope,
   target: Target,
+  "trending-up": TrendingUp,
   truck: Truck,
   twitter: Twitter,
   users: Users,
