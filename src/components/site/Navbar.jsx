@@ -69,7 +69,7 @@ export function Navbar() {
         )}
       >
         <div
-          className="wrap flex items-center gap-8 transition-[height] duration-slow ease-standard"
+          className="wrap relative flex items-center justify-between transition-[height] duration-slow ease-standard"
           style={{ height: scrolled ? 68 : 82 }}
         >
           <Link to="/" onClick={() => dispatch(closeMobileMenu())} className="flex items-center gap-3">
@@ -103,7 +103,7 @@ export function Navbar() {
               </NavLink>
             ))}
           </nav>
-          <div className="ms-auto flex items-center gap-3">
+          <div className="flex items-center gap-3">
             <Button size="sm" iconEnd="arrow-left" to="/contact" className="hidden sm:inline-flex">
               {t("nav.bookConsult")}
             </Button>

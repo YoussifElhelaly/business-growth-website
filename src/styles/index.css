@@ -367,7 +367,10 @@ img {
     display: flex;
     align-items: center;
     gap: 26px;
-    margin-inline-start: 12px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   .nav-burger {
     display: none;
