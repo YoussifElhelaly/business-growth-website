@@ -684,7 +684,6 @@ export function HomePage() {
       <HomeLocation />
 
       <HomeContact />
-      <CTABand />
     </main>
   );
 }

@@ -9,6 +9,11 @@
       href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%2323293A'/%3E%3Cpath d='M11 33 L21 23 L27 29 L37 16' stroke='%23D9A45F' stroke-width='4.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M28.5 15 H38 V24.5' stroke='%23D9A45F' stroke-width='4.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+    />
     <title>بزنس جروث — استشارات قانونية ومحاسبية وتأسيس شركات</title>
     <meta
       name="description"
@@ -18,11 +23,20 @@
   <body>
     <div id="root">
       <div id="__pre_splash" style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;background:radial-gradient(120% 95% at 82% -15%, #2f3749 0%, #23293a 38%, #171c28 72%, #171c28 100%);z-index:9999;">
-        <div style="width:48px;height:48px;border-radius:999px;border:3px solid rgba(255,255,255,.18);border-top-color:#d9a45f;animation:__spin 0.85s linear infinite;"></div>
+        <svg width="56" height="56" viewBox="0 0 48 48">
+          <rect width="48" height="48" fill="#23293a" stroke="rgba(255,255,255,.14)" stroke-width="1"></rect>
+          <path d="M11 33 L21 23 L27 29 L37 16" stroke="#d9a45f" stroke-width="4.4" fill="none" stroke-linecap="round" stroke-linejoin="round"
+            style="stroke-dasharray:40;stroke-dashoffset:40;animation:__d1 1.8s ease-in-out infinite"></path>
+          <path d="M28.5 15 H38 V24.5" stroke="#d9a45f" stroke-width="4.4" fill="none" stroke-linecap="round" stroke-linejoin="round"
+            style="stroke-dasharray:19;stroke-dashoffset:19;animation:__d2 1.8s ease-in-out infinite"></path>
+        </svg>
         <div style="font-family:'Tajawal',system-ui,sans-serif;font-weight:700;font-size:15px;letter-spacing:.06em;color:#fff;">بزنس جروث</div>
       </div>
     </div>
-    <style>@keyframes __spin{to{transform:rotate(360deg)}}</style>
+    <style>
+      @keyframes __d1 { 0%,100% { stroke-dashoffset:40 } 55%,85% { stroke-dashoffset:0 } }
+      @keyframes __d2 { 0%,30% { stroke-dashoffset:19 } 60%,85% { stroke-dashoffset:0 } 100% { stroke-dashoffset:19 } }
+    </style>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

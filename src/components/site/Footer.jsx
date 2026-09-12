@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useSiteContent } from "../../api/hooks.js";
+import { BrandMark } from "../../design-system/index.js";
 
 function FooterColumn({ title, items }) {
   return (
@@ -31,7 +32,10 @@ export function Footer() {
         style={{ paddingBlock: "56px 38px" }}
       >
         <div>
-          <div className="font-display text-[22px] font-bold text-text-strong">{content.brand.name}</div>
+          <div className="flex items-center gap-3">
+            <BrandMark size={38} className="text-copper" />
+            <div className="font-display text-[22px] font-bold text-text-strong">{content.brand.name}</div>
+          </div>
           <p className="mt-[14px] max-w-[300px] text-sm leading-[1.85] text-text-muted">{content.brand.tagline}</p>
         </div>
         <FooterColumn title={t("footer.servicesTitle")} items={content.services.slice(0, 4).map((s) => s.title)} />

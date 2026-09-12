@@ -8,3 +8,4 @@ export { Dialog } from "./feedback/Dialog.jsx";
 export { Reveal } from "./motion/Reveal.jsx";
 export { CountUp } from "./motion/CountUp.jsx";
 export { Marquee } from "./brand/Marquee.jsx";
+export { BrandMark } from "./brand/BrandMark.jsx";

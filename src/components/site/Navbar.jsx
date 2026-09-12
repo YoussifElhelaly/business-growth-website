@@ -3,10 +3,9 @@ import { NavLink, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import clsx from "clsx";
-import { Icon, Button } from "../../design-system/index.js";
+import { Icon, Button, BrandMark } from "../../design-system/index.js";
 import { useSiteContent } from "../../api/hooks.js";
 import { toggleMobileMenu, closeMobileMenu } from "../../app/uiSlice.js";
-import logo from "../../assets/logo.jpg";
 
 const NAV_ITEMS = [
   { to: "/", key: "home" },
@@ -74,7 +73,7 @@ export function Navbar() {
           style={{ height: scrolled ? 68 : 82 }}
         >
           <Link to="/" onClick={() => dispatch(closeMobileMenu())} className="flex items-center gap-3">
-            <img src={logo} alt="" className="h-[38px] w-auto" onError={(e) => (e.currentTarget.style.display = "none")} />
+            <BrandMark size={38} className="text-copper" />
             <span className="max-w-[140px] truncate font-display text-[22px] font-bold leading-none text-navy sm:max-w-none">
               {content?.brand.name}
             </span>
