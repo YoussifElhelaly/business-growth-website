@@ -1,11 +1,12 @@
 import { PIC } from "../data/pictures.js";
 import { RESOURCES } from "../../shared/resources.js";
 import { projectRecord } from "../../shared/projectRecord.js";
+import { API_BASE_URL } from "./config.js";
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 async function fetchResource(key) {
-  const res = await fetch(`/api/${key}`);
+  const res = await fetch(`${API_BASE_URL}/api/${key}`);
   return res.json();
 }
 

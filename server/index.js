@@ -1,6 +1,7 @@
 import "dotenv/config";
 import express from "express";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 import { authRouter } from "./auth/routes.js";
 import { servicesRouter } from "./routes/services.routes.js";
 import { RESOURCES } from "../shared/resources.js";
@@ -14,7 +15,24 @@ if (missing.length) {
   process.exit(1);
 }
 
+const extraOrigins = (process.env.CORS_ORIGIN || "")
+  .split(",")
+  .map((s) => s.trim())
+  .filter(Boolean);
+const allowedOriginPatterns = [/^https:\/\/([a-z0-9-]+\.)*vercel\.app$/, ...extraOrigins];
+const isAllowedOrigin = (origin) =>
+  allowedOriginPatterns.some((p) => (p instanceof RegExp ? p.test(origin) : p === origin));
+
 const app = express();
+app.use(
+  cors({
+    origin(origin, callback) {
+      if (!origin || isAllowedOrigin(origin)) return callback(null, true);
+      callback(new Error("not-allowed-by-cors"));
+    },
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(cookieParser());
 

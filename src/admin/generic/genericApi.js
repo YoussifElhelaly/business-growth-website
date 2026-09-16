@@ -1,5 +1,7 @@
-async function request(url, options) {
-  const res = await fetch(url, {
+import { API_BASE_URL } from "../../api/config.js";
+
+async function request(path, options) {
+  const res = await fetch(`${API_BASE_URL}${path}`, {
     headers: { "Content-Type": "application/json" },
     credentials: "include",
     ...options,
