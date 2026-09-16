@@ -1,10 +1,19 @@
 import { Router } from "express";
 import bcrypt from "bcryptjs";
+import rateLimit from "express-rate-limit";
 import { signSession, setSessionCookie, clearSessionCookie, readSession } from "./middleware.js";
 
 export const authRouter = Router();
 
-authRouter.post("/login", async (req, res) => {
+const loginLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 10,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: "too-many-attempts" },
+});
+
+authRouter.post("/login", loginLimiter, async (req, res) => {
   const { username, password } = req.body || {};
   const validUsername = username === process.env.ADMIN_USERNAME;
   const validPassword =
