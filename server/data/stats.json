@@ -1,0 +1,38 @@
+[
+  {
+    "id": "50c16c5f-f9ee-48b5-a976-0e3cbb05a6ef",
+    "value": 14,
+    "suffix": "+",
+    "label": {
+      "ar": "سنة خبرة في السوق السعودي",
+      "en": "years of experience in the Saudi market"
+    }
+  },
+  {
+    "id": "98b08bb2-4e21-4055-ac73-b4b5d5fffca9",
+    "value": 860,
+    "suffix": "",
+    "label": {
+      "ar": "شركة تم تأسيسها",
+      "en": "companies formed"
+    }
+  },
+  {
+    "id": "00487916-2667-4f18-b4e3-82a3d699db8f",
+    "value": 12,
+    "suffix": "",
+    "label": {
+      "ar": "قطاعاً نخدمه",
+      "en": "sectors we serve"
+    }
+  },
+  {
+    "id": "c4f749a6-24f6-4675-a9a0-12945c21b932",
+    "value": 98,
+    "suffix": "%",
+    "label": {
+      "ar": "نسبة رضا العملاء",
+      "en": "client satisfaction rate"
+    }
+  }
+]

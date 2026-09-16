@@ -1,0 +1,68 @@
+[
+  {
+    "id": "21ef4209-875a-40ab-8f8a-090463c8edca",
+    "title": {
+      "ar": "نفهم الأعمال، لا الإجراءات فقط",
+      "en": "We understand business, not just procedures"
+    },
+    "description": {
+      "ar": "ننظر إلى التأسيس من زاوية المستثمر ورائد الأعمال، وليس من زاوية المعاملة وحدها.",
+      "en": "We look at formation from the investor's and founder's perspective, not just the transaction itself."
+    }
+  },
+  {
+    "id": "c4e33c4f-cd45-440d-8a1c-58ede7c6a9b9",
+    "title": {
+      "ar": "نقلّل المفاجآت",
+      "en": "We reduce surprises"
+    },
+    "description": {
+      "ar": "قبل أن تبدأ، تعرف المسار المتوقع والمتطلبات والتكاليف والمدة التقديرية بحسب حالتك.",
+      "en": "Before you start, you know the expected path, requirements, costs, and estimated timeline for your case."
+    }
+  },
+  {
+    "id": "4adc7296-8847-4978-b5cb-6d784e37a152",
+    "title": {
+      "ar": "نربط الخدمات ببعضها",
+      "en": "We connect the services"
+    },
+    "description": {
+      "ar": "التأسيس والترخيص والعلامة والعقود والدراسة ليست ملفات منفصلة — نربطها حين ترتبط بنجاح مشروعك.",
+      "en": "Formation, licensing, trademarks, contracts, and studies aren't separate files — we connect them when your project's success depends on it."
+    }
+  },
+  {
+    "id": "4cf33508-c4be-4bf9-b849-fbe68af25189",
+    "title": {
+      "ar": "نقلّل الأخطاء المكلفة",
+      "en": "We reduce costly mistakes"
+    },
+    "description": {
+      "ar": "نراجع المسار قبل التنفيذ، لأن تصحيح الخطأ بعد وقوعه أكثر تكلفة من منعه.",
+      "en": "We review the path before execution, because fixing a mistake after it happens costs more than preventing it."
+    }
+  },
+  {
+    "id": "f534c1e6-e3d8-4fee-ab2e-f1f5cf6af430",
+    "title": {
+      "ar": "وضوح من البداية",
+      "en": "Clarity from the start"
+    },
+    "description": {
+      "ar": "ماذا سنفعل، ولماذا، وكم سيكلف، وما المتوقع زمنياً — تعرف الإجابات قبل أن تبدأ.",
+      "en": "What we'll do, why, how much it will cost, and the expected timeline — you know the answers before you begin."
+    }
+  },
+  {
+    "id": "7017d9c7-a699-447c-bbc3-a12386d00529",
+    "title": {
+      "ar": "شخص يتابع ملفك",
+      "en": "One person tracks your file"
+    },
+    "description": {
+      "ar": "لا نريدك أن تشعر أنك رقم طلب — نتابع ملفك ونبقيك على اطلاع بمراحله.",
+      "en": "We don't want you to feel like a ticket number — we track your file and keep you informed at every stage."
+    }
+  }
+]

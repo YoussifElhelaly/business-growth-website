@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ebb6976f-0f51-4ad2-a472-2894cb39e7e8",
+    "icon": "hard-hat",
+    "label": {
+      "ar": "مقاولات",
+      "en": "Contracting"
+    }
+  },
+  {
+    "id": "88d33c19-859f-451d-b7cd-875555e4e958",
+    "icon": "shopping-bag",
+    "label": {
+      "ar": "تجزئة",
+      "en": "Retail"
+    }
+  },
+  {
+    "id": "eb0ee8a4-4bdc-4a15-9448-cd2264531655",
+    "icon": "cpu",
+    "label": {
+      "ar": "تقنية",
+      "en": "Technology"
+    }
+  },
+  {
+    "id": "196633dd-d241-4a6d-9449-5dbf498a137f",
+    "icon": "truck",
+    "label": {
+      "ar": "لوجستيك",
+      "en": "Logistics"
+    }
+  },
+  {
+    "id": "be202a68-5ac8-44c2-b6d7-472afff8ff80",
+    "icon": "stethoscope",
+    "label": {
+      "ar": "رعاية صحية",
+      "en": "Healthcare"
+    }
+  },
+  {
+    "id": "c243fd42-0e2d-4665-b3d6-935b110ed4a8",
+    "icon": "graduation-cap",
+    "label": {
+      "ar": "تعليم",
+      "en": "Education"
+    }
+  }
+]

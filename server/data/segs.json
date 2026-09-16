@@ -1,0 +1,59 @@
+[
+  {
+    "id": "0a80a0b2-0a5f-42cc-828f-d1a8c7a733c8",
+    "title": {
+      "ar": "مستثمر أجنبي",
+      "en": "Foreign investor"
+    },
+    "subtitle": {
+      "ar": "دخول السوق السعودي يبدأ بالقرار الصحيح",
+      "en": "Entering the Saudi market starts with the right decision"
+    },
+    "description": {
+      "ar": "لا تبدأ بإرسال الأوراق قبل أن تعرف: ما الكيان المناسب؟ ما التراخيص المطلوبة؟ ما القيود المرتبطة بالنشاط؟ وما التكلفة المتوقعة؟",
+      "en": "Don't start filing paperwork before you know: what entity fits? What licenses are required? What restrictions apply to your activity? And what's the expected cost?"
+    },
+    "cta": {
+      "ar": "ابدأ استثمارك في السعودية",
+      "en": "Start your investment in Saudi Arabia"
+    }
+  },
+  {
+    "id": "5e43b248-61fe-44ab-988b-cc77b045aa81",
+    "title": {
+      "ar": "رائد أعمال سعودي أو خليجي",
+      "en": "Saudi or Gulf entrepreneur"
+    },
+    "subtitle": {
+      "ar": "لا تجعل مشروعك أكبر من نظامه",
+      "en": "Don't let your project outgrow its legal structure"
+    },
+    "description": {
+      "ar": "إذا كان مشروعك ينمو، فقد حان وقت أن يكون الكيان والعقود والإجراءات الداخلية على مستوى هذا النمو.",
+      "en": "If your project is growing, it may be time for your entity, contracts, and internal procedures to match that growth."
+    },
+    "cta": {
+      "ar": "تحدّث معنا عن مشروعك",
+      "en": "Talk to us about your project"
+    }
+  },
+  {
+    "id": "cdc15c08-ad7e-4471-9d97-7e97cce8cc4f",
+    "title": {
+      "ar": "شركة قائمة",
+      "en": "Existing company"
+    },
+    "subtitle": {
+      "ar": "ربما لا تحتاج شركة جديدة... بل إعادة تنظيم",
+      "en": "You may not need a new company... just a reorganization"
+    },
+    "description": {
+      "ar": "مشكلات في التراخيص أو العقود أو الهيكلة أو التصنيف أو العلامة التجارية؟ نقيّم وضعك ونحدد الأولويات.",
+      "en": "Problems with licenses, contracts, structuring, classification, or your trademark? We assess your situation and set the priorities."
+    },
+    "cta": {
+      "ar": "اطلب تقييم وضع شركتك",
+      "en": "Request an assessment of your company"
+    }
+  }
+]

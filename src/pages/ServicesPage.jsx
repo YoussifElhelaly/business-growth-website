@@ -114,7 +114,7 @@ export function ServicesPage() {
 
       <section className="sec">
         <div className="wrap r-split grid items-center gap-[clamp(40px,6vw,88px)]" style={{ gridTemplateColumns: "1fr 1fr" }}>
-          <Photo src={pictures.gallery[2]} ratio="4/3" zoom label="اجتماع عمل" />
+          <Photo src={content.officeCaptions[2]?.image} ratio="4/3" zoom label="اجتماع عمل" />
           <div>
             <SectionHead kicker={t("services.fees.kicker")} title={t("services.fees.title")} />
             <ul className="mt-7 flex list-none flex-col gap-[18px]">

@@ -1,4 +1,4 @@
-export { Icon } from "./core/Icon.jsx";
+export { Icon, ICONS } from "./core/Icon.jsx";
 export { Button } from "./core/Button.jsx";
 export { IconButton } from "./core/IconButton.jsx";
 export { Input } from "./forms/Input.jsx";

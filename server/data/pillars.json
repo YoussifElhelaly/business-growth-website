@@ -1,0 +1,38 @@
+[
+  {
+    "id": "4a52eb70-badd-4578-9051-18911ff59a78",
+    "icon": "landmark",
+    "title": {
+      "ar": "بداية صحيحة",
+      "en": "The right start"
+    },
+    "description": {
+      "ar": "نختار الكيان والترخيص المناسبين لطبيعة نشاطك وملكيتك وطموحك، قبل أن تُفتح أي معاملة.",
+      "en": "We choose the entity and license that fit your activity, ownership, and ambition — before any paperwork is filed."
+    }
+  },
+  {
+    "id": "b82fe911-7d92-4630-8ee7-897b89551ed1",
+    "icon": "shield-check",
+    "title": {
+      "ar": "حماية مبكرة",
+      "en": "Early protection"
+    },
+    "description": {
+      "ar": "علامتك التجارية وعقودك وأصولك الفكرية محمية قبل أن تنفق على التسويق وتدخل في شراكات.",
+      "en": "Your brand, contracts, and intellectual assets are protected before you spend on marketing or enter partnerships."
+    }
+  },
+  {
+    "id": "c3dee977-a14d-48f4-9d34-b177af5e7edd",
+    "icon": "trending-up",
+    "title": {
+      "ar": "جاهزية للنمو",
+      "en": "Ready to grow"
+    },
+    "description": {
+      "ar": "كيان منظّم بعقود وإجراءات وتصنيف يسمح لك بالتوسع والمنافسة على مشاريع أكبر.",
+      "en": "An entity organized with contracts, procedures, and classification that lets you expand and compete for bigger projects."
+    }
+  }
+]

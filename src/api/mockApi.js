@@ -1,20 +1,47 @@
-import { contentAr } from "../data/content.ar.js";
-import { contentEn } from "../data/content.en.js";
 import { PIC } from "../data/pictures.js";
+import { RESOURCES } from "../../shared/resources.js";
+import { projectRecord } from "../../shared/projectRecord.js";
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-const contentByLang = { ar: contentAr, en: contentEn };
+async function fetchResource(key) {
+  const res = await fetch(`/api/${key}`);
+  return res.json();
+}
 
 /**
- * Simulates fetching the site's content from a backend API.
- * Swap this out for a real `fetch("/api/site?lang=...")` call once a
- * backend exists — the shape returned here is what the app already expects.
+ * Fetches every content section — all managed through the admin dashboard —
+ * from the local API server, and reshapes each into the flat, single-language
+ * object the page components expect.
  */
 export async function fetchSiteContent(lang) {
-  await delay(650);
-  const content = contentByLang[lang] || contentByLang.ar;
-  return { ...content, pictures: PIC };
+  const [resourceEntries] = await Promise.all([
+    Promise.all(
+      RESOURCES.map(async (resource) => {
+        const raw = await fetchResource(resource.key);
+        if (resource.mode === "singleton") {
+          return [resource.key, projectRecord(raw, resource.fields, lang)];
+        }
+        const projected = raw.map((record) => projectRecord(record, resource.fields, lang));
+        return [resource.key, resource.simpleList ? projected.map((r) => r.value) : projected];
+      })
+    ),
+    delay(150),
+  ]);
+
+  const rawServices = await fetchResource("services");
+  const services = rawServices.map((s) => ({
+    id: s.id,
+    icon: s.icon,
+    image: s.image,
+    title: s.title[lang] ?? s.title.ar,
+    tag: s.tag[lang] ?? s.tag.ar,
+    description: s.description[lang] ?? s.description.ar,
+    items: s.items[lang] ?? s.items.ar,
+    outcome: s.outcome[lang] ?? s.outcome.ar,
+  }));
+
+  return { ...Object.fromEntries(resourceEntries), services, pictures: PIC };
 }
 
 /**

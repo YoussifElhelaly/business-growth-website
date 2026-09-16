@@ -1,0 +1,50 @@
+[
+  {
+    "id": "93084e8a-2866-4522-bf8d-5dff62bb5027",
+    "icon": "globe",
+    "title": {
+      "ar": "مستثمر أجنبي",
+      "en": "Foreign investor"
+    },
+    "description": {
+      "ar": "تريد دخول السوق السعودي بثقة ومسار نظامي واضح من البداية.",
+      "en": "You want to enter the Saudi market with confidence and a clear regulatory path from day one."
+    }
+  },
+  {
+    "id": "de02ee5c-e485-4f05-8bc8-c98133202e91",
+    "icon": "handshake",
+    "title": {
+      "ar": "مستثمر خليجي",
+      "en": "Gulf investor"
+    },
+    "description": {
+      "ar": "تريد تأسيس نشاطك والاستفادة من المسار المناسب لصفتك.",
+      "en": "You want to set up your business and make the most of the path suited to your status."
+    }
+  },
+  {
+    "id": "6c236126-80bc-4745-afc0-fe10be460167",
+    "icon": "sparkles",
+    "title": {
+      "ar": "رائد أعمال سعودي",
+      "en": "Saudi entrepreneur"
+    },
+    "description": {
+      "ar": "تريد تأسيس شركة منظّمة بدلاً من إدارة نشاطك بشكل عشوائي.",
+      "en": "You want a properly organized company instead of running your activity informally."
+    }
+  },
+  {
+    "id": "17a38bde-e7ad-4f62-b5b7-5c05d4d421cf",
+    "icon": "building",
+    "title": {
+      "ar": "صاحب شركة قائمة",
+      "en": "Existing company owner"
+    },
+    "description": {
+      "ar": "تحتاج تراخيص أو عقوداً أو إعادة تنظيم أو تجهيزاً للتوسع.",
+      "en": "You need licenses, contracts, restructuring, or preparation for expansion."
+    }
+  }
+]

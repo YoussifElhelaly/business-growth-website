@@ -355,13 +355,13 @@ function HomeSegs() {
 
 function HomeOffice() {
   const { t } = useTranslation();
-  const { pictures } = useSiteContent();
-  const labels = t("home.gallery.labels", { returnObjects: true });
+  const { content } = useSiteContent();
+  const office = content.officeCaptions;
   const items = [
-    { photo: pictures.gallery[0], caption: labels[0], span: 2, height: 340 },
-    { photo: pictures.gallery[1], caption: labels[1], span: 1, height: 240 },
-    { photo: pictures.gallery[2], caption: labels[2], span: 1, height: 240 },
-    { photo: pictures.gallery[3], caption: labels[3], span: 2, height: 340 },
+    { photo: office[0]?.image, caption: office[0]?.value, span: 2, height: 340 },
+    { photo: office[1]?.image, caption: office[1]?.value, span: 1, height: 240 },
+    { photo: office[2]?.image, caption: office[2]?.value, span: 1, height: 240 },
+    { photo: office[3]?.image, caption: office[3]?.value, span: 2, height: 340 },
   ];
   return (
     <section className="sec">

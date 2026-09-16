@@ -1,0 +1,127 @@
+[
+  {
+    "id": "abd6b0c8-9b6c-4630-9063-1b18ed07d6ac",
+    "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&h=800&q=80",
+    "category": "est",
+    "cat": {
+      "ar": "تأسيس",
+      "en": "Formation"
+    },
+    "title": {
+      "ar": "كم تكلفة تأسيس شركة في السعودية فعلياً؟",
+      "en": "What does forming a company in Saudi Arabia actually cost?"
+    },
+    "excerpt": {
+      "ar": "تفصيل واقعي للرسوم الحكومية والتكاليف المتغيرة، ولماذا لا توجد تكلفة واحدة تناسب الجميع.",
+      "en": "A realistic breakdown of government fees and variable costs, and why there's no single cost that fits everyone."
+    },
+    "date": {
+      "ar": "12 أغسطس 2026",
+      "en": "August 12, 2026"
+    },
+    "readTime": {
+      "ar": "6 دقائق",
+      "en": "6 min read"
+    }
+  },
+  {
+    "id": "32a4e70e-24ee-4aa6-9475-8e34131f72ca",
+    "image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&h=800&q=80",
+    "category": "invest",
+    "cat": {
+      "ar": "التراخيص",
+      "en": "Licensing"
+    },
+    "title": {
+      "ar": "خمسة أسباب تجعل طلب ترخيصك يُرفض",
+      "en": "Five reasons your license application gets rejected"
+    },
+    "excerpt": {
+      "ar": "الأخطاء المتكررة في ملفات التراخيص، وكيف تتفاداها قبل التقديم بدل معالجتها بعد الرفض.",
+      "en": "The recurring mistakes in license filings, and how to avoid them before applying instead of fixing them after rejection."
+    },
+    "date": {
+      "ar": "4 أغسطس 2026",
+      "en": "August 4, 2026"
+    },
+    "readTime": {
+      "ar": "4 دقائق",
+      "en": "4 min read"
+    }
+  },
+  {
+    "id": "4feae7c2-8c76-4cf9-b8ee-a27c80dd6dd5",
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&h=800&q=80",
+    "category": "legal",
+    "cat": {
+      "ar": "الملكية الفكرية",
+      "en": "Intellectual Property"
+    },
+    "title": {
+      "ar": "لماذا قد تخسر علامتك التجارية إن لم تسجّلها؟",
+      "en": "Why you could lose your trademark if you don't register it"
+    },
+    "excerpt": {
+      "ar": "ما الذي يحدث فعلياً حين يسجّل شخص آخر الاسم الذي بنيته، وما خياراتك حينها.",
+      "en": "What actually happens when someone else registers the name you built, and what your options are then."
+    },
+    "date": {
+      "ar": "27 يوليو 2026",
+      "en": "July 27, 2026"
+    },
+    "readTime": {
+      "ar": "5 دقائق",
+      "en": "5 min read"
+    }
+  },
+  {
+    "id": "5b2dfa01-11ef-43ba-b69d-fcb3f78a73a7",
+    "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&h=800&q=80",
+    "category": "legal",
+    "cat": {
+      "ar": "قانوني",
+      "en": "Legal"
+    },
+    "title": {
+      "ar": "خمسة بنود لا يجب إغفالها في عقد الشركاء",
+      "en": "Five clauses you shouldn't skip in a partnership agreement"
+    },
+    "excerpt": {
+      "ar": "من آليات الخروج إلى فض النزاعات، بنود تحمي الشركة قبل نشوء الخلاف.",
+      "en": "From exit mechanisms to dispute resolution — clauses that protect the company before a conflict arises."
+    },
+    "date": {
+      "ar": "18 يوليو 2026",
+      "en": "July 18, 2026"
+    },
+    "readTime": {
+      "ar": "7 دقائق",
+      "en": "7 min read"
+    }
+  },
+  {
+    "id": "66a449d4-230a-4bd1-aa8b-60e0c6fb7979",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&h=800&q=80",
+    "category": "est",
+    "cat": {
+      "ar": "تأسيس",
+      "en": "Formation"
+    },
+    "title": {
+      "ar": "الفروع أم الشركة المستقلة؟ مقارنة نظامية",
+      "en": "Branch or standalone company? A regulatory comparison"
+    },
+    "excerpt": {
+      "ar": "أثر الاختيار على المسؤولية والضريبة والتراخيص التشغيلية.",
+      "en": "How the choice affects liability, tax, and operating licenses."
+    },
+    "date": {
+      "ar": "9 يوليو 2026",
+      "en": "July 9, 2026"
+    },
+    "readTime": {
+      "ar": "6 دقائق",
+      "en": "6 min read"
+    }
+  }
+]

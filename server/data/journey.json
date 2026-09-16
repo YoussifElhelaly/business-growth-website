@@ -1,0 +1,68 @@
+[
+  {
+    "id": "eaa00296-4bb9-4ccf-8058-820e832863eb",
+    "title": {
+      "ar": "فكرة",
+      "en": "Idea"
+    },
+    "description": {
+      "ar": "نفهم نشاطك وهدفك",
+      "en": "We understand your activity and goal"
+    }
+  },
+  {
+    "id": "cec7f2dd-d615-412c-8da5-8825e84d80fe",
+    "title": {
+      "ar": "جدوى",
+      "en": "Feasibility"
+    },
+    "description": {
+      "ar": "نختبر الأرقام والسوق",
+      "en": "We test the numbers and the market"
+    }
+  },
+  {
+    "id": "2326c50c-1333-4a3e-9b66-321e8dd03887",
+    "title": {
+      "ar": "كيان",
+      "en": "Entity"
+    },
+    "description": {
+      "ar": "نؤسس الشكل الأنسب",
+      "en": "We form the right legal structure"
+    }
+  },
+  {
+    "id": "327b4669-51c2-401b-97b6-549cad902eb8",
+    "title": {
+      "ar": "ترخيص",
+      "en": "License"
+    },
+    "description": {
+      "ar": "نُجهّزك لممارسة النشاط",
+      "en": "We get you ready to operate"
+    }
+  },
+  {
+    "id": "0fe55055-6ece-4b8c-baf5-0ea192f6373e",
+    "title": {
+      "ar": "حماية",
+      "en": "Protection"
+    },
+    "description": {
+      "ar": "علامتك وعقودك وأصولك",
+      "en": "Your brand, contracts, and assets"
+    }
+  },
+  {
+    "id": "33096531-c359-44d6-bf7c-834997b58c68",
+    "title": {
+      "ar": "نمو",
+      "en": "Growth"
+    },
+    "description": {
+      "ar": "تشغيل وتنظيم وتوسّع",
+      "en": "Operations, structuring, and expansion"
+    }
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "all",
+    "label": {
+      "ar": "الكل",
+      "en": "All"
+    }
+  },
+  {
+    "id": "est",
+    "label": {
+      "ar": "تأسيس",
+      "en": "Formation"
+    }
+  },
+  {
+    "id": "legal",
+    "label": {
+      "ar": "قانوني",
+      "en": "Legal"
+    }
+  },
+  {
+    "id": "tax",
+    "label": {
+      "ar": "محاسبة وضرائب",
+      "en": "Accounting & Tax"
+    }
+  },
+  {
+    "id": "billing",
+    "label": {
+      "ar": "الأتعاب",
+      "en": "Fees"
+    }
+  }
+]

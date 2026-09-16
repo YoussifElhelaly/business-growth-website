@@ -1,0 +1,233 @@
+[
+  {
+    "id": "company-formation",
+    "icon": "building",
+    "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1400&h=1000&q=80",
+    "title": {
+      "ar": "تأسيس الشركة 2",
+      "en": "Company Formation"
+    },
+    "tag": {
+      "ar": "ابدأ بكيان يناسب مشروعك، لا بخيار متاح",
+      "en": "Start with an entity that fits your project, not just what's available"
+    },
+    "description": {
+      "ar": "تأسيس الشركات المحلية والأجنبية من حجز الاسم التجاري حتى إصدار السجل التجاري.",
+      "en": "Forming local and foreign-owned companies, from trade-name reservation through to issuing the commercial registration."
+    },
+    "items": {
+      "ar": [
+        "تأسيس الشركات للمستثمر الأجنبي",
+        "تأسيس الشركات للمستثمر الخليجي",
+        "تأسيس الشركات للمستثمر السعودي"
+      ],
+      "en": [
+        "Formation for foreign investors",
+        "Formation for Gulf investors",
+        "Formation for Saudi investors"
+      ]
+    },
+    "outcome": {
+      "ar": "لا نؤسس لك شركة فقط... بل قاعدة يمكن أن تكبر معها.",
+      "en": "We don't just form a company for you — we build a foundation it can grow on."
+    }
+  },
+  {
+    "id": "licensing-classification",
+    "icon": "award",
+    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1400&h=1000&q=80",
+    "title": {
+      "ar": "التراخيص والتصنيف",
+      "en": "Licensing & Classification"
+    },
+    "tag": {
+      "ar": "شركتك لا تبدأ حتى تستطيع ممارسة نشاطها",
+      "en": "Your company doesn't start until it can actually operate"
+    },
+    "description": {
+      "ar": "إنهاء ترخيص وزارة الاستثمار للمستثمرين غير السعوديين ومتابعة الاشتراطات.",
+      "en": "Securing the Ministry of Investment license for non-Saudi investors and managing the ongoing requirements."
+    },
+    "items": {
+      "ar": [
+        "تراخيص الأنشطة",
+        "التراخيص الصناعية",
+        "الرخص التجارية ورخصة بلدي",
+        "تصنيف المقاولين"
+      ],
+      "en": [
+        "Activity licenses",
+        "Industrial licenses",
+        "Commercial and municipal licenses",
+        "Contractor classification"
+      ]
+    },
+    "outcome": {
+      "ar": "انتقال من التأسيس إلى التشغيل بأقل قدر من التعطيل.",
+      "en": "The move from formation to operation, with the least possible disruption."
+    }
+  },
+  {
+    "id": "protecting-your-name-ideas",
+    "icon": "shield-check",
+    "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1400&h=1000&q=80",
+    "title": {
+      "ar": "حماية اسمك وابتكارك",
+      "en": "Protecting Your Name & Ideas"
+    },
+    "tag": {
+      "ar": "لا تبنِ علامة قد يسبقك إليها غيرك",
+      "en": "Don't build a brand someone else can claim first"
+    },
+    "description": {
+      "ar": "تسجيل العلامات التجارية وحماية حقوق الملكية الفكرية وبراءات الاختراع.",
+      "en": "Registering trademarks and protecting intellectual property rights and patents."
+    },
+    "items": {
+      "ar": [
+        "تسجيل العلامات التجارية",
+        "حماية حقوق الملكية الفكرية",
+        "تسجيل براءات الاختراع",
+        "تسجيل النماذج الصناعية"
+      ],
+      "en": [
+        "Trademark registration",
+        "Intellectual property protection",
+        "Patent registration",
+        "Industrial design registration"
+      ]
+    },
+    "outcome": {
+      "ar": "علامتك ليست مجرد اسم... إنها أحد أصول شركتك.",
+      "en": "Your brand isn't just a name — it's one of your company's assets."
+    }
+  },
+  {
+    "id": "contracts-legal-due-diligence",
+    "icon": "file-text",
+    "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&h=1000&q=80",
+    "title": {
+      "ar": "العقود والفحص القانوني",
+      "en": "Contracts & Legal Due Diligence"
+    },
+    "tag": {
+      "ar": "الشراكة الصحيحة تبدأ بعقد واضح",
+      "en": "The right partnership starts with a clear contract"
+    },
+    "description": {
+      "ar": "صياغة عقود الشراكة والعقود التجارية والفحص القانوني قبل الاستحواذ.",
+      "en": "Drafting partnership and commercial contracts, plus legal due diligence before an acquisition."
+    },
+    "items": {
+      "ar": [
+        "صياغة عقود الشراكة",
+        "العقود التجارية",
+        "الفحص القانوني قبل الاستحواذ"
+      ],
+      "en": [
+        "Partnership agreements",
+        "Commercial contracts",
+        "Pre-acquisition due diligence"
+      ]
+    },
+    "outcome": {
+      "ar": "تدخل الصفقة وأنت تعرف ما الذي تشتريه فعلاً.",
+      "en": "You enter the deal knowing exactly what you're buying."
+    }
+  },
+  {
+    "id": "feasibility-market-research",
+    "icon": "bar-chart",
+    "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&h=1000&q=80",
+    "title": {
+      "ar": "الجدوى وأبحاث السوق",
+      "en": "Feasibility & Market Research"
+    },
+    "tag": {
+      "ar": "قبل أن تستثمر أموالك... اختبر الفكرة",
+      "en": "Before you invest your money... test the idea"
+    },
+    "description": {
+      "ar": "دراسة الجدوى المالية والشاملة، وأبحاث السوق والمنافسين.",
+      "en": "Financial and comprehensive feasibility studies, and market and competitor research."
+    },
+    "items": {
+      "ar": [
+        "دراسة الجدوى المالية",
+        "دراسة الجدوى الشاملة",
+        "أبحاث السوق والمنافسين"
+      ],
+      "en": [
+        "Financial feasibility studies",
+        "Comprehensive feasibility studies",
+        "Market and competitor research"
+      ]
+    },
+    "outcome": {
+      "ar": "دراسة بجزء بسيط من رأس المال... قد توفّر عليه كله.",
+      "en": "A study costing a small fraction of your capital could save all of it."
+    }
+  },
+  {
+    "id": "operations-management",
+    "icon": "scale",
+    "image": "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&w=1400&h=1000&q=80",
+    "title": {
+      "ar": "التشغيل والإدارة",
+      "en": "Operations & Management"
+    },
+    "tag": {
+      "ar": "تأسيس الشركة ليس نهاية الطريق",
+      "en": "Forming the company isn't the end of the road"
+    },
+    "description": {
+      "ar": "إدارة الحسابات الإلكترونية ومتابعة الالتزامات والاستشارات الإدارية.",
+      "en": "Managing e-invoicing accounts, tracking obligations, and administrative advisory."
+    },
+    "items": {
+      "ar": [
+        "إدارة الحسابات الإلكترونية",
+        "متابعة الالتزامات والتجديدات",
+        "الاستشارات الإدارية والهيكلة"
+      ],
+      "en": [
+        "E-invoicing account management",
+        "Tracking obligations and renewals",
+        "Administrative advisory and structuring"
+      ]
+    },
+    "outcome": {
+      "ar": "ألا تكون شركتك مجرد كيان قائم... بل شركة مستعدة للنمو.",
+      "en": "So your company isn't just an existing entity... but one ready to grow."
+    }
+  },
+  {
+    "id": "service",
+    "icon": "bar-chart",
+    "image": "",
+    "title": {
+      "ar": "قمهقق",
+      "en": "يسب"
+    },
+    "tag": {
+      "ar": "منمنم",
+      "en": "بسي"
+    },
+    "description": {
+      "ar": "همبنسهمنبسي",
+      "en": "بسيب"
+    },
+    "items": {
+      "ar": [
+        "بسي"
+      ],
+      "en": [
+        "بسيب"
+      ]
+    },
+    "outcome": {
+      "ar": "بسيبسي",
+      "en": "بسي"
+    }
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "c8c83406-9f51-4483-967a-163bd0707143",
+    "value": {
+      "ar": "+120",
+      "en": "120+"
+    },
+    "label": {
+      "ar": "شركة تم تأسيسها",
+      "en": "companies formed"
+    }
+  },
+  {
+    "id": "39a9c563-b89a-41fa-8e56-f45b6cd0400e",
+    "value": {
+      "ar": "14",
+      "en": "14"
+    },
+    "label": {
+      "ar": "سنة خبرة في السوق السعودي",
+      "en": "years in the Saudi market"
+    }
+  },
+  {
+    "id": "0ae567c4-744b-43c8-8809-b0e9c0e52ccd",
+    "value": {
+      "ar": "12",
+      "en": "12"
+    },
+    "label": {
+      "ar": "جنسية لعملائنا",
+      "en": "nationalities served"
+    }
+  },
+  {
+    "id": "f6094a80-96ba-4244-9dc7-7b1fb5ac334b",
+    "value": {
+      "ar": "18",
+      "en": "18"
+    },
+    "label": {
+      "ar": "خدمة تحت سقف واحد",
+      "en": "services under one roof"
+    }
+  }
+]

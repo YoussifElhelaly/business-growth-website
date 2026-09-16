@@ -1,0 +1,42 @@
+[
+  {
+    "id": "b53b00df-0027-411c-8c4d-ac1ebbe59ac0",
+    "image": "/images/office/office-facade.jpeg",
+    "value": {
+      "ar": "واجهة المكتب",
+      "en": "Office entrance"
+    }
+  },
+  {
+    "id": "7d6ae0e3-22c5-4920-84bf-6e88e68e981c",
+    "image": "/images/office/meeting-room.jpeg",
+    "value": {
+      "ar": "قاعة الاجتماعات",
+      "en": "Meeting room"
+    }
+  },
+  {
+    "id": "cedaa62c-063f-47e8-8177-0a63aadd618e",
+    "image": "/images/office/reception.jpeg",
+    "value": {
+      "ar": "منطقة الاستقبال",
+      "en": "Reception area"
+    }
+  },
+  {
+    "id": "502eb815-b59c-4abf-a17f-1ca737645f4c",
+    "image": "/images/office/workspace.jpeg",
+    "value": {
+      "ar": "مساحة العمل",
+      "en": "Workspace"
+    }
+  },
+  {
+    "id": "248391a0-ad02-4d8c-b173-bda166d6c0ee",
+    "image": "/images/office/second-floor.jpeg",
+    "value": {
+      "ar": "الدور الثاني",
+      "en": "Second floor"
+    }
+  }
+]

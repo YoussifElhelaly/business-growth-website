@@ -1,0 +1,37 @@
+[
+  {
+    "id": "all",
+    "label": {
+      "ar": "الكل",
+      "en": "All"
+    }
+  },
+  {
+    "id": "est",
+    "label": {
+      "ar": "تأسيس",
+      "en": "Formation"
+    }
+  },
+  {
+    "id": "legal",
+    "label": {
+      "ar": "قانوني",
+      "en": "Legal"
+    }
+  },
+  {
+    "id": "tax",
+    "label": {
+      "ar": "ضرائب",
+      "en": "Tax"
+    }
+  },
+  {
+    "id": "invest",
+    "label": {
+      "ar": "استثمار أجنبي",
+      "en": "Foreign Investment"
+    }
+  }
+]

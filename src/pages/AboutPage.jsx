@@ -39,8 +39,8 @@ export function AboutPage() {
           <div className="relative">
             <Photo src={pictures.about[1]} ratio="4/3" zoom label="اجتماع" />
             <div className="r-g2 mt-[6px] grid grid-cols-2 gap-[6px]">
-              <Photo src={pictures.gallery[1]} ratio="1/1" zoom label="المكتب" />
-              <Photo src={pictures.gallery[4]} ratio="1/1" zoom label="الفريق" />
+              <Photo src={content.officeCaptions[1]?.image} ratio="1/1" zoom label="المكتب" />
+              <Photo src={content.officeCaptions[4]?.image} ratio="1/1" zoom label="الفريق" />
             </div>
           </div>
         </div>
@@ -85,7 +85,7 @@ export function AboutPage() {
       </section>
 
       <ClientWall />
-      <Gallery images={pictures.gallery} />
+      <Gallery items={content.officeCaptions} />
       <CTABand />
     </main>
   );

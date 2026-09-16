@@ -1,0 +1,30 @@
+[
+  {
+    "id": "9a66a51e-388a-4cc7-bd5a-12045b1e8ca6",
+    "value": {
+      "ar": "خبرة مرخّصة",
+      "en": "Licensed expertise"
+    }
+  },
+  {
+    "id": "77693b81-b498-477e-b9ac-aeb65f9069ca",
+    "value": {
+      "ar": "سرعة في الإنجاز",
+      "en": "Fast turnaround"
+    }
+  },
+  {
+    "id": "aead52e9-1c40-4f8b-8ae5-9900852c7b9d",
+    "value": {
+      "ar": "وضوح في الأتعاب",
+      "en": "Clear, written fees"
+    }
+  },
+  {
+    "id": "cf58e9ee-fb18-4fec-b39b-996ec1d15ca4",
+    "value": {
+      "ar": "متابعة بعد التأسيس",
+      "en": "Support after formation"
+    }
+  }
+]

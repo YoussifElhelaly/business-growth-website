@@ -1,0 +1,50 @@
+[
+  {
+    "id": "036a3010-eb76-495a-aa10-8cccc7be3452",
+    "icon": "shield-check",
+    "title": {
+      "ar": "الأمانة",
+      "en": "Honesty"
+    },
+    "description": {
+      "ar": "نقول للعميل ما يحتاج معرفته، وليس ما يرغب في سماعه.",
+      "en": "We tell clients what they need to know, not what they want to hear."
+    }
+  },
+  {
+    "id": "f07e77e2-519b-4e63-8a13-192e58288345",
+    "icon": "target",
+    "title": {
+      "ar": "الدقة",
+      "en": "Precision"
+    },
+    "description": {
+      "ar": "مراجعة مزدوجة لكل مستند قبل تقديمه للجهات الرسمية.",
+      "en": "Every document gets a double review before it's submitted to official bodies."
+    }
+  },
+  {
+    "id": "ddeb2a35-5ebc-4868-848a-e790493ffbe0",
+    "icon": "lock",
+    "title": {
+      "ar": "السرية",
+      "en": "Confidentiality"
+    },
+    "description": {
+      "ar": "تُعالَج بيانات العملاء وفق سياسة سرية مكتوبة وملزمة.",
+      "en": "Client data is handled under a written, binding confidentiality policy."
+    }
+  },
+  {
+    "id": "128c1eee-3475-4a06-a97e-0cf5f5a2d1cb",
+    "icon": "handshake",
+    "title": {
+      "ar": "الشراكة",
+      "en": "Partnership"
+    },
+    "description": {
+      "ar": "نبقى مع العميل بعد التأسيس، لا نتوقف عند إصدار السجل.",
+      "en": "We stay with the client after formation — we don't stop once the registration is issued."
+    }
+  }
+]

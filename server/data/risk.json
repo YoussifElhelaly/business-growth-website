@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "title": {
+        "ar": "كيان غير مناسب",
+        "en": "Wrong entity type"
+      },
+      "description": {
+        "ar": "شكل نظامي لا يناسب طبيعة نشاطك ولا هيكل ملكيتك.",
+        "en": "A legal form that doesn't fit your activity or ownership structure."
+      }
+    },
+    {
+      "title": {
+        "ar": "ترخيص غير متوافق",
+        "en": "Mismatched license"
+      },
+      "description": {
+        "ar": "رخصة لا تغطي نموذج عملك الفعلي فتتعطل قبل أن تبدأ.",
+        "en": "A license that doesn't cover your actual business model, stalling before you start."
+      }
+    },
+    {
+      "title": {
+        "ar": "تأخير التشغيل",
+        "en": "Delayed launch"
+      },
+      "description": {
+        "ar": "شهور تمضي قبل أن تتمكن من تحقيق أول ريال إيراد.",
+        "en": "Months pass before you can generate your first riyal of revenue."
+      }
+    },
+    {
+      "title": {
+        "ar": "عقود ضعيفة",
+        "en": "Weak contracts"
+      },
+      "description": {
+        "ar": "عقود لا تحمي حقوق الشركاء يوم يظهر الخلاف فعلاً.",
+        "en": "Contracts that fail to protect partners' rights when a dispute actually arises."
+      }
+    },
+    {
+      "title": {
+        "ar": "علامة غير محمية",
+        "en": "Unprotected brand"
+      },
+      "description": {
+        "ar": "اسم بنيته بالمال والوقت يمكن أن يسجّله غيرك باسمه.",
+        "en": "A name you built with money and time that someone else can register first."
+      }
+    },
+    {
+      "title": {
+        "ar": "شراكة غير منظّمة",
+        "en": "Unstructured partnership"
+      },
+      "description": {
+        "ar": "علاقة قائمة على الثقة وحدها دون تنظيم مكتوب للأدوار.",
+        "en": "A relationship built on trust alone, with no written organization of roles."
+      }
+    },
+    {
+      "title": {
+        "ar": "استثمار بلا جدوى",
+        "en": "Investment without feasibility"
+      },
+      "description": {
+        "ar": "ضخ رأس مال في مشروع لم تُختبر أرقامه ولا سوقه.",
+        "en": "Capital poured into a project whose numbers and market were never tested."
+      }
+    },
+    {
+      "title": {
+        "ar": "مخاطر بعد الاستحواذ",
+        "en": "Post-acquisition risk"
+      },
+      "description": {
+        "ar": "التزامات وقضايا تظهر بعد شراء شركة قائمة بلا فحص.",
+        "en": "Liabilities and disputes surfacing after buying an existing company without due diligence."
+      }
+    }
+  ],
+  "note": {
+    "ar": "لهذا نحن لا نبدأ بالمعاملة... بل نبدأ بفهم مشروعك.",
+    "en": "That's why we don't start with the transaction... we start by understanding your business."
+  }
+}

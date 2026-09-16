@@ -1,0 +1,50 @@
+[
+  {
+    "id": "e1962e85-8e07-4c47-88a9-9771e114cfa5",
+    "number": "01",
+    "title": {
+      "ar": "جلسة تشخيص",
+      "en": "Diagnostic session"
+    },
+    "description": {
+      "ar": "نستمع لنشاطك وهيكل الملكية ونحدد المسار النظامي المناسب.",
+      "en": "We learn about your activity and ownership structure and define the right regulatory path."
+    }
+  },
+  {
+    "id": "c2d26562-e584-4678-8a81-2d6127c3780f",
+    "number": "02",
+    "title": {
+      "ar": "عرض وخطة",
+      "en": "Proposal & plan"
+    },
+    "description": {
+      "ar": "عرض سعر مكتوب وجدول زمني وقائمة بالمستندات المطلوبة.",
+      "en": "A written quote, timeline, and list of required documents."
+    }
+  },
+  {
+    "id": "76f3aae1-f56f-482d-b552-ef6cd9690ea1",
+    "number": "03",
+    "title": {
+      "ar": "التنفيذ",
+      "en": "Execution"
+    },
+    "description": {
+      "ar": "ننهي الإجراءات لدى الجهات ونوافيك بتحديث أسبوعي.",
+      "en": "We complete the procedures with the authorities and send you a weekly update."
+    }
+  },
+  {
+    "id": "44c72f91-472b-44d8-a7ff-8e699878edb0",
+    "number": "04",
+    "title": {
+      "ar": "المتابعة",
+      "en": "Ongoing support"
+    },
+    "description": {
+      "ar": "متابعة الامتثال والتجديدات بعد بدء النشاط.",
+      "en": "Compliance and renewal tracking once your business is up and running."
+    }
+  }
+]

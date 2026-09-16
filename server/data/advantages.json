@@ -1,0 +1,50 @@
+[
+  {
+    "id": "c6a53aa0-79a8-47d4-84b9-9a39e7e7a84a",
+    "icon": "users",
+    "title": {
+      "ar": "فريق مرخّص",
+      "en": "Licensed team"
+    },
+    "description": {
+      "ar": "محامون ومحاسبون قانونيون مرخّصون من الجهات السعودية المختصة.",
+      "en": "Lawyers and chartered accountants licensed by the relevant Saudi authorities."
+    }
+  },
+  {
+    "id": "d2dfdcb7-f802-4919-b715-25c4dba018e9",
+    "icon": "clock",
+    "title": {
+      "ar": "سرعة الإنجاز",
+      "en": "Fast turnaround"
+    },
+    "description": {
+      "ar": "متوسط سبعة أيام عمل لإتمام التأسيس بعد استكمال المستندات.",
+      "en": "An average of seven business days to complete formation once documents are ready."
+    }
+  },
+  {
+    "id": "166a1bed-3846-4a76-8539-7c8b3c7a3bca",
+    "icon": "languages",
+    "title": {
+      "ar": "خدمة بلغتين",
+      "en": "Bilingual service"
+    },
+    "description": {
+      "ar": "مراسلات ومستندات بالعربية والإنجليزية للمستثمرين من خارج المملكة.",
+      "en": "Correspondence and documents in Arabic and English for investors from outside the Kingdom."
+    }
+  },
+  {
+    "id": "2b3ebb98-6bba-4d52-825d-c3c79af996ac",
+    "icon": "file-check",
+    "title": {
+      "ar": "وضوح في الأتعاب",
+      "en": "Clear, written fees"
+    },
+    "description": {
+      "ar": "عرض سعر مكتوب قبل البدء، دون رسوم مفاجئة في منتصف الإجراء.",
+      "en": "A written quote before we start — no surprise charges mid-process."
+    }
+  }
+]

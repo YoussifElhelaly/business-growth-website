@@ -1,0 +1,66 @@
+[
+  {
+    "id": "ceca4041-248e-4c9d-bf42-7b33fdab9da0",
+    "photo": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=900&h=1200&q=80",
+    "name": {
+      "ar": "د. خالد المطيري",
+      "en": "Dr. Khalid Al-Mutairi"
+    },
+    "role": {
+      "ar": "الشريك المؤسس",
+      "en": "Founding Partner"
+    },
+    "credentials": {
+      "ar": "محامٍ مرخص · ماجستير قانون تجاري",
+      "en": "Licensed attorney · Master's in Commercial Law"
+    }
+  },
+  {
+    "id": "c015e970-2e0d-4a7c-8dfe-bc56d58b9d5a",
+    "photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&h=1200&q=80",
+    "name": {
+      "ar": "نورة الشمري",
+      "en": "Noura Al-Shammari"
+    },
+    "role": {
+      "ar": "مديرة الامتثال",
+      "en": "Head of Compliance"
+    },
+    "credentials": {
+      "ar": "محاسب قانوني · زميل SOCPA",
+      "en": "Chartered accountant · SOCPA fellow"
+    }
+  },
+  {
+    "id": "0f669797-a6f1-4e44-a6af-066267fc2d3d",
+    "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&h=1200&q=80",
+    "name": {
+      "ar": "عبدالرحمن السالم",
+      "en": "Abdulrahman Al-Salem"
+    },
+    "role": {
+      "ar": "رئيس قسم التأسيس",
+      "en": "Head of Formation"
+    },
+    "credentials": {
+      "ar": "12 سنة خبرة في السجلات التجارية",
+      "en": "12 years of experience in commercial registrations"
+    }
+  },
+  {
+    "id": "35448820-8819-4d23-b8ca-18dda616f53e",
+    "photo": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=900&h=1200&q=80",
+    "name": {
+      "ar": "ليان القحطاني",
+      "en": "Layan Al-Qahtani"
+    },
+    "role": {
+      "ar": "مستشارة ضرائب",
+      "en": "Tax Advisor"
+    },
+    "credentials": {
+      "ar": "معتمدة في ضريبة القيمة المضافة",
+      "en": "Certified in VAT"
+    }
+  }
+]

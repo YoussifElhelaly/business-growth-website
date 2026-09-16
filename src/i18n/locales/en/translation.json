@@ -145,8 +145,7 @@
     "gallery": {
       "kicker": "Our Office",
       "title": "The place your project starts from",
-      "lead": "We're not a faceless online service — we have an office in Riyadh you can visit and meet us in.",
-      "labels": ["Office Entrance", "Meeting Room", "Reception Area", "Workspace", "Second Floor"]
+      "lead": "We're not a faceless online service — we have an office in Riyadh you can visit and meet us in."
     },
     "clientWall": {
       "kicker": "Our References",

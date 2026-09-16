@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1bd517f0-c86a-4bd8-9b78-3bdd7e8b41ef",
+    "who": {
+      "ar": "مستثمر مصري",
+      "en": "Egyptian investor"
+    },
+    "sector": {
+      "ar": "قطاع الأغذية · مطعم ومصنع صغير",
+      "en": "Food sector · restaurant and small factory"
+    },
+    "challenge": {
+      "ar": "دخول السوق بدون إقامة استثمارية، ونشاط يتطلب ترخيصاً غذائياً واشتراطات بلدية.",
+      "en": "Entering the market without an investor residency, with an activity requiring a food license and municipal conditions."
+    },
+    "solution": {
+      "ar": "ترخيص استثماري، سجل تجاري، رخصة بلدي، وتفعيل المنصات الحكومية.",
+      "en": "Investment license, commercial registration, municipal license, and activation of government platforms."
+    },
+    "result": {
+      "ar": "رخصة مشغّلة وافتتاح فعلي",
+      "en": "Operating license and an actual opening"
+    },
+    "duration": "45"
+  },
+  {
+    "id": "bf8e769f-bafd-437a-8533-64a868d976cc",
+    "who": {
+      "ar": "شركة مقاولات سعودية",
+      "en": "Saudi contracting company"
+    },
+    "sector": {
+      "ar": "قطاع الإنشاءات",
+      "en": "Construction sector"
+    },
+    "challenge": {
+      "ar": "شركة قائمة لا تستطيع التقديم على مناقصات حكومية لعدم وجود تصنيف.",
+      "en": "An existing company unable to bid on government tenders due to a lack of classification."
+    },
+    "solution": {
+      "ar": "تجهيز ملف التصنيف، معالجة النواقص النظامية، ورفع الطلب ومتابعته.",
+      "en": "Preparing the classification file, resolving regulatory gaps, and submitting and following up on the application."
+    },
+    "result": {
+      "ar": "تصنيف معتمد وأهلية للمناقصات",
+      "en": "Approved classification and tender eligibility"
+    },
+    "duration": "60"
+  },
+  {
+    "id": "5095ce90-2acf-4c4b-8b9f-3ba06463bb5b",
+    "who": {
+      "ar": "رائد أعمال خليجي",
+      "en": "Gulf entrepreneur"
+    },
+    "sector": {
+      "ar": "قطاع التجزئة · علامة أزياء",
+      "en": "Retail sector · fashion brand"
+    },
+    "challenge": {
+      "ar": "علامة تجارية أُطلقت قبل تسجيلها، مع شراكة بلا عقد مكتوب.",
+      "en": "A trademark launched before registration, with a partnership lacking a written contract."
+    },
+    "solution": {
+      "ar": "تسجيل العلامة، صياغة عقد شراكة منظّم للأدوار والخروج وحل الخلاف.",
+      "en": "Registering the trademark, drafting a partnership agreement organizing roles, exit, and dispute resolution."
+    },
+    "result": {
+      "ar": "علامة محمية وشراكة موثّقة",
+      "en": "Protected trademark and a documented partnership"
+    },
+    "duration": "30"
+  }
+]

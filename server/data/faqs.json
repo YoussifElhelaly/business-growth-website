@@ -1,0 +1,122 @@
+[
+  {
+    "id": "35ca6d73-9384-4802-adc8-a5bbccf38630",
+    "category": "est",
+    "q": {
+      "ar": "هل يمكن للمستثمر الأجنبي تأسيس شركة في السعودية؟",
+      "en": "Can a foreign investor form a company in Saudi Arabia?"
+    },
+    "a": {
+      "ar": "يختلف ذلك بحسب النشاط والهيكل والمتطلبات النظامية ذات العلاقة. نحدد لك المسار المناسب قبل بدء الإجراءات.",
+      "en": "It depends on the activity, structure, and related regulatory requirements. We define the right path for you before starting the procedures."
+    }
+  },
+  {
+    "id": "b7606708-82de-4676-a84d-8995aa8c8fe7",
+    "category": "billing",
+    "q": {
+      "ar": "كم تكلفة تأسيس الشركة؟",
+      "en": "How much does company formation cost?"
+    },
+    "a": {
+      "ar": "لا توجد تكلفة واحدة تناسب الجميع؛ فهي تختلف بحسب نوع المستثمر والكيان والنشاط والتراخيص المطلوبة. تحصل على تصور واضح للتكلفة قبل البدء.",
+      "en": "There's no single cost that fits everyone; it varies by investor type, entity, activity, and required licenses. You get a clear cost picture before starting."
+    }
+  },
+  {
+    "id": "f60c5af9-ef1c-4bb5-8828-75a4f73da9a3",
+    "category": "est",
+    "q": {
+      "ar": "كم يستغرق التأسيس؟",
+      "en": "How long does formation take?"
+    },
+    "a": {
+      "ar": "تختلف المدة بحسب نوع الكيان والنشاط والتراخيص والجهات ذات العلاقة. نوضح لك المدة التقديرية لمسارك قبل التنفيذ.",
+      "en": "The timeline varies by entity type, activity, licenses, and the authorities involved. We outline the estimated timeline for your path before execution."
+    }
+  },
+  {
+    "id": "916925ac-9412-4bae-a64a-a5935c1e61ff",
+    "category": "est",
+    "q": {
+      "ar": "هل أحتاج إلى دراسة جدوى؟",
+      "en": "Do I need a feasibility study?"
+    },
+    "a": {
+      "ar": "ليس كل مشروع يحتاج نفس مستوى الدراسة، لكن إذا كان المشروع يتطلب استثماراً كبيراً، فاختبار الفكرة والسوق والأرقام قبل ضخ رأس المال قد يكون من أهم القرارات التي تتخذها.",
+      "en": "Not every project needs the same level of study, but if it requires significant investment, testing the idea, market, and numbers before committing capital may be one of the most important decisions you make."
+    }
+  },
+  {
+    "id": "cf5b8907-3ea2-474a-925c-e3db749ac9da",
+    "category": "legal",
+    "q": {
+      "ar": "هل أحتاج إلى تسجيل العلامة التجارية؟",
+      "en": "Do I need to register a trademark?"
+    },
+    "a": {
+      "ar": "إذا كانت العلامة جزءاً أساسياً من مشروعك، فإن حمايتها مبكراً تساعدك على حماية الاسم الذي ستنفق وقتاً ومالاً في بنائه.",
+      "en": "If the brand is a core part of your project, protecting it early helps safeguard the name you'll spend time and money building."
+    }
+  },
+  {
+    "id": "4b6114af-4291-4b46-9412-49990b1b3b0f",
+    "category": "legal",
+    "q": {
+      "ar": "لماذا أحتاج إلى عقد شراكة؟",
+      "en": "Why do I need a partnership agreement?"
+    },
+    "a": {
+      "ar": "لأن الثقة وحدها لا تكفي عندما يكبر المال والعمل والمسؤوليات. العقد الجيد ينظم العلاقة قبل ظهور الخلاف.",
+      "en": "Because trust alone isn't enough once money, work, and responsibilities grow. A good contract organizes the relationship before a dispute appears."
+    }
+  },
+  {
+    "id": "5ac9ca06-16bc-466f-9e0c-edabb5ea0de5",
+    "category": "est",
+    "q": {
+      "ar": "هل تقدمون خدمات بعد تأسيس الشركة؟",
+      "en": "Do you provide services after the company is formed?"
+    },
+    "a": {
+      "ar": "نعم. تشمل خدماتنا المساعدة في الحسابات الإلكترونية، العقود، الاستشارات الإدارية وغيرها من الخدمات التي تحتاجها الشركة خلال مراحل نموها.",
+      "en": "Yes. Our services include e-invoicing support, contracts, administrative advisory, and other services the company needs as it grows."
+    }
+  },
+  {
+    "id": "252e50e3-26e5-490e-92dc-5ddfacc037cc",
+    "category": "est",
+    "q": {
+      "ar": "ماذا أحتاج لأبدأ؟",
+      "en": "What do I need to get started?"
+    },
+    "a": {
+      "ar": "في البداية نحتاج إلى فهم نشاطك وهدفك ووضعك الحالي. بعدها نحدد لك المسار المناسب والمستندات والخطوات والتكلفة التقديرية.",
+      "en": "At the start, we need to understand your activity, goal, and current situation. Then we define the right path, documents, steps, and estimated cost."
+    }
+  },
+  {
+    "id": "129f304e-1de7-4e3d-91e5-8d56f604055b",
+    "category": "tax",
+    "q": {
+      "ar": "متى يجب التسجيل في ضريبة القيمة المضافة؟",
+      "en": "When must a company register for VAT?"
+    },
+    "a": {
+      "ar": "عند بلوغ الإيرادات السنوية الحد الإلزامي المقرر نظاماً، ويمكن التسجيل الاختياري قبل ذلك.",
+      "en": "Once annual revenue reaches the mandatory statutory threshold; voluntary registration is possible before that."
+    }
+  },
+  {
+    "id": "e9aa6ca5-3cfa-49d1-b926-0eb70f684c96",
+    "category": "tax",
+    "q": {
+      "ar": "هل تتولون إعداد القوائم المالية؟",
+      "en": "Do you prepare financial statements?"
+    },
+    "a": {
+      "ar": "نعم، تُعد القوائم وفق المعايير المعتمدة وتُراجع من محاسب قانوني.",
+      "en": "Yes, statements are prepared to approved standards and reviewed by a chartered accountant."
+    }
+  }
+]

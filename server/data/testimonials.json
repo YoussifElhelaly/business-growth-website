@@ -1,0 +1,62 @@
+[
+  {
+    "id": "53ed1108-df23-42be-93a2-e0087822e6ec",
+    "featured": true,
+    "quote": {
+      "ar": "أنجزوا تأسيس شركتنا في أسبوع واحد، وكانت المتابعة دقيقة في كل خطوة. أهم ما لمسناه هو الوضوح في الأتعاب والمدة قبل البدء.",
+      "en": "They formed our company in a single week, and the follow-up was precise at every step. What stood out most was the clarity on fees and timeline before we even started."
+    },
+    "name": {
+      "ar": "سارة العتيبي",
+      "en": "Sarah Al-Otaibi"
+    },
+    "role": {
+      "ar": "المدير المالي",
+      "en": "CFO"
+    },
+    "company": {
+      "ar": "مجموعة نُهى",
+      "en": "Nuha Group"
+    }
+  },
+  {
+    "id": "40021b1c-a088-49bb-8e3f-c20c21b1c769",
+    "featured": false,
+    "quote": {
+      "ar": "استفدنا من مراجعة العقود قبل التوقيع، ووفّرت علينا التزامات غير محسوبة.",
+      "en": "The contract review before signing saved us from liabilities we hadn't accounted for."
+    },
+    "name": {
+      "ar": "ماجد الدوسري",
+      "en": "Majed Al-Dosari"
+    },
+    "role": {
+      "ar": "الشريك المؤسس",
+      "en": "Founding Partner"
+    },
+    "company": {
+      "ar": "شركة أفق للمقاولات",
+      "en": "Ufuq Contracting"
+    }
+  },
+  {
+    "id": "1270d93b-a117-4a98-a9b2-7374ca5c1c63",
+    "featured": false,
+    "quote": {
+      "ar": "كمستثمر غير سعودي، أنهى الفريق الترخيص والتأسيس عن بُعد دون أي زيارة.",
+      "en": "As a non-Saudi investor, the team completed licensing and formation remotely without a single visit."
+    },
+    "name": {
+      "ar": "Omar Haddad",
+      "en": "Omar Haddad"
+    },
+    "role": {
+      "ar": "Managing Director",
+      "en": "Managing Director"
+    },
+    "company": {
+      "ar": "Levant Retail",
+      "en": "Levant Retail"
+    }
+  }
+]

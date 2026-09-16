@@ -1,0 +1,46 @@
+[
+  {
+    "id": "3328d59f-45d3-4364-ad5c-7ec7ab61789c",
+    "value": {
+      "ar": "+20",
+      "en": "20+"
+    },
+    "label": {
+      "ar": "سنة خبرة",
+      "en": "years of experience"
+    }
+  },
+  {
+    "id": "41d3dbb7-c982-4434-9806-d6907e64c194",
+    "value": {
+      "ar": "+500",
+      "en": "500+"
+    },
+    "label": {
+      "ar": "عميل",
+      "en": "clients"
+    }
+  },
+  {
+    "id": "4b6b621f-c0d2-4746-b8fc-ae3429d15c38",
+    "value": {
+      "ar": "98%",
+      "en": "98%"
+    },
+    "label": {
+      "ar": "التزام بالمواعيد",
+      "en": "on-time delivery"
+    }
+  },
+  {
+    "id": "9e334d14-a14c-4ab6-b473-618af41f1835",
+    "value": {
+      "ar": "+25",
+      "en": "25+"
+    },
+    "label": {
+      "ar": "ترخيصًا نُصدره شهريًا",
+      "en": "licenses issued monthly"
+    }
+  }
+]
