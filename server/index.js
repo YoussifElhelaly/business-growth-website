@@ -29,7 +29,11 @@ if (process.env.NODE_ENV !== "production") {
   extraOrigins.push("http://localhost:5173");
   extraOrigins.push("http://127.0.0.1:5173");
 }
-const allowedOriginPatterns = [/^https:\/\/([a-z0-9-]+\.)*vercel\.app$/, ...extraOrigins];
+const allowedOriginPatterns = [
+  /^https:\/\/([a-z0-9-]+\.)*vercel\.app$/,
+  /^https:\/\/([a-z0-9-]+\.)*trycloudflare\.com$/,
+  ...extraOrigins
+];
 const isAllowedOrigin = (origin) =>
   allowedOriginPatterns.some((p) => (p instanceof RegExp ? p.test(origin) : p === origin));
 
