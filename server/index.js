@@ -39,6 +39,7 @@ const isAllowedOrigin = (origin) =>
   allowedOriginPatterns.some((p) => (p instanceof RegExp ? p.test(origin) : p === origin));
 
 const app = express();
+app.set("trust proxy", 1);
 app.use(
   cors({
     origin(origin, callback) {
