@@ -62,6 +62,18 @@ for (const resource of RESOURCES) {
 }
 
 const port = Number(process.env.API_PORT) || 4001;
+
+// Serve static frontend in production
+if (process.env.NODE_ENV === "production") {
+  const distPath = path.join(__dirname, "..", "dist");
+  app.use(express.static(distPath));
+  app.get("*", (req, res) => {
+    if (!req.path.startsWith("/api")) {
+      res.sendFile(path.join(distPath, "index.html"));
+    }
+  });
+}
+
 app.listen(port, () => {
   console.log(`API listening on http://localhost:${port}`);
 });

@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    container_name: business-growth-app
+    restart: unless-stopped
+    ports:
+      - "4001:4001"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+    volumes:
+      # Map the data directory to a persistent Docker volume
+      - bg_data:/app/server/data
+      # Map the uploads directory to a persistent Docker volume
+      - bg_uploads:/app/server/uploads
+
+volumes:
+  bg_data:
+  bg_uploads:
