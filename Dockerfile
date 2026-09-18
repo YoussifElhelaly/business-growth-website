@@ -4,6 +4,8 @@ FROM node:22-alpine AS builder
 WORKDIR /app
 
 # Copy package files and install ALL dependencies (including dev for Vite)
+RUN apk add --no-cache python3 make g++
+
 COPY package*.json ./
 RUN npm ci
 
