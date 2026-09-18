@@ -1,3 +1,5 @@
+import { SEO } from "../components/site/SEO.jsx";
+
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Icon, Button, Input, Select, Textarea } from "../design-system/index.js";
@@ -24,6 +26,8 @@ export function ContactPage() {
 
   return (
     <main>
+      <SEO title={t("contact.pageHead.title")} />
+
       <PageHead kicker={t("contact.pageHead.kicker")} title={t("contact.pageHead.title")} lead={t("contact.pageHead.lead")} image={pictures.pageHead.contact} />
 
       <section className="sec">

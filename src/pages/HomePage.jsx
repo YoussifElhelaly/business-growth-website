@@ -1,3 +1,5 @@
+import { SEO } from "../components/site/SEO.jsx";
+
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -314,7 +316,7 @@ function HomeServiceCard({ s, i }) {
           </ul>
           <p className="mt-4 border-t border-border-subtle pt-4 text-[13.5px] italic leading-[1.75] text-text-muted">{s.outcome}</p>
           <button
-            onClick={() => navigate("/services")}
+            onClick={() => navigate(`/services/${s.id}`)}
             className="mt-auto flex items-center gap-2 pt-5 text-sm font-bold text-copper-dark transition-[gap] duration-300 group-hover:gap-3"
           >
             {t("home.services.detailsCta")} <Icon name="arrow-left" size={16} />
@@ -417,12 +419,17 @@ function HomeFaq() {
   );
 }
 
+
 export function HomePage() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const { content, pictures } = useSiteContent();
+
+  if (!content) return null;
 
   return (
     <main>
+      <SEO title={t("nav.home", "الرئيسية")} />
       <HeroStage images={pictures.hero}>
         <div className="max-w-[760px]">
           <span className="eyebrow on-dark">{t("home.hero.kicker")}</span>
@@ -508,7 +515,7 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* <section className="sec">
+      <section className="sec">
         <div className="wrap r-split grid items-center gap-[clamp(40px,6vw,96px)]" style={{ gridTemplateColumns: "1fr 1.05fr" }}>
           <div className="relative pb-[74px] ps-16">
             <Photo src={pictures.about[0]} ratio="4/5" zoom label="مكتبنا" />
@@ -545,7 +552,7 @@ export function HomePage() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       <HomeSegs />
 
@@ -648,7 +655,7 @@ export function HomePage() {
             {content.articles.slice(0, 3).map((a, i) => (
               <Reveal key={i} delay={i * 90} className="h-full">
                 <Link
-                  to="/blog"
+                  to={`/blog/${a.id}`}
                   className="group flex h-full flex-col border border-border-subtle bg-parchment text-inherit transition-all duration-300 hover:-translate-y-[5px] hover:border-copper hover:shadow-[0_16px_34px_-20px_rgba(35,41,58,.4)]"
                 >
                   <Photo

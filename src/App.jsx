@@ -6,8 +6,10 @@ import { SiteLayout } from "./layouts/SiteLayout.jsx";
 import { HomePage } from "./pages/HomePage.jsx";
 import { AboutPage } from "./pages/AboutPage.jsx";
 import { ServicesPage } from "./pages/ServicesPage.jsx";
+import { ServiceDetailsPage } from "./pages/ServiceDetailsPage.jsx";
 import { FaqPage } from "./pages/FaqPage.jsx";
 import { BlogPage } from "./pages/BlogPage.jsx";
+import { BlogDetailsPage } from "./pages/BlogDetailsPage.jsx";
 import { ContactPage } from "./pages/ContactPage.jsx";
 import { AdminGuard } from "./admin/AdminGuard.jsx";
 import { AdminLayout } from "./admin/AdminLayout.jsx";
@@ -28,9 +30,11 @@ export default function App() {
           <Route element={<SiteLayout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/:id" element={<ServiceDetailsPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/faq" element={<FaqPage />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:id" element={<BlogDetailsPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<HomePage />} />
           </Route>

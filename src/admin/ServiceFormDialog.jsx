@@ -2,6 +2,11 @@ import { useEffect, useState } from "react";
 import { Dialog, Button, IconButton, Input, Select, Textarea } from "../design-system/index.js";
 import { useCreateService, useUpdateService } from "../api/adminHooks.js";
 import { ICON_OPTIONS } from "./iconOptions.js";
+import { ImageUploadField } from "./generic/ImageUploadField.jsx";
+import { IconPicker } from "./generic/IconPicker.jsx";
+
+
+import { RichTextField } from "./generic/RichTextField.jsx";
 
 const emptyForm = {
   icon: "building",
@@ -113,8 +118,8 @@ export function ServiceFormDialog({ open, service, onClose }) {
     >
       <div className="flex max-h-[65vh] flex-col gap-6 overflow-y-auto pe-1">
         <div className="grid grid-cols-2 gap-4">
-          <Select label="الأيقونة" options={ICON_OPTIONS} value={form.icon} onChange={setField("icon")} />
-          <Input label="رابط الصورة" value={form.image} onChange={setField("image")} placeholder="https://..." />
+          <IconPicker label="الأيقونة" value={form.icon} onChange={setField("icon")} />
+          <ImageUploadField label="الصورة" value={form.image} onChange={setField("image")} />
         </div>
 
         {[
@@ -123,27 +128,16 @@ export function ServiceFormDialog({ open, service, onClose }) {
         ].map(({ lang, label }) => (
           <div key={lang} className="flex flex-col gap-4 border-t border-border-subtle pt-5">
             <h5 className="text-sm font-bold tracking-wide text-copper-dark">{label}</h5>
-            <Input
-              label="العنوان"
-              value={form.title[lang]}
-              onChange={setLangField("title", lang)}
-              error={lang === "ar" ? errors.titleAr : errors.titleEn}
-              required
-            />
-            <Input label="الوصف المختصر (tag)" value={form.tag[lang]} onChange={setLangField("tag", lang)} />
-            <Textarea
-              label="الوصف"
-              rows={3}
-              value={form.description[lang]}
-              onChange={setLangField("description", lang)}
-              error={lang === "ar" ? errors.descriptionAr : errors.descriptionEn}
-              required
-            />
-            <ItemsField label="البنود" items={form.items[lang]} onChange={setItems(lang)} />
-            {(lang === "ar" ? errors.itemsAr : errors.itemsEn) && (
-              <span className="text-xs text-danger-600">{lang === "ar" ? errors.itemsAr : errors.itemsEn}</span>
-            )}
-            <Textarea label="خلاصة النتيجة (outcome)" rows={2} value={form.outcome[lang]} onChange={setLangField("outcome", lang)} />
+            <div className="flex flex-col gap-6">
+              <Input label="اسم الخدمة" value={form.title[lang]} onChange={setLangField("title", lang)} required error={errors?.[`title${lang.toUpperCase()}`]} />
+              <Input label="الوسم التوضيحي (Tag)" value={form.tag[lang]} onChange={setLangField("tag", lang)} placeholder="مثال: الاستشارات المالية" />
+              <RichTextField label="الوصف" value={form.description[lang]} onChange={setLangField("description", lang)} required error={errors?.[`description${lang.toUpperCase()}`]} />
+
+              <ItemsField label="البنود" items={form.items[lang]} onChange={setItems(lang)} />
+              {errors?.[`items${lang.toUpperCase()}`] && <div className="mt-1 text-sm text-danger-600">أضف عنصراً واحداً على الأقل.</div>}
+
+              <RichTextField label="خلاصة النتيجة (outcome)" value={form.outcome[lang]} onChange={setLangField("outcome", lang)} />
+            </div>
           </div>
         ))}
       </div>

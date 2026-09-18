@@ -336,8 +336,23 @@ export const RESOURCES = [
       { key: "cat", label: "اسم التصنيف المعروض", type: "text", bilingual: true },
       { key: "title", label: "العنوان", type: "text", bilingual: true, required: true },
       { key: "excerpt", label: "المقتطف", type: "textarea", bilingual: true, required: true },
+      { key: "body", label: "محتوى المقال", type: "richtext", bilingual: true },
       { key: "date", label: "التاريخ", type: "text", bilingual: true },
       { key: "readTime", label: "مدة القراءة", type: "text", bilingual: true },
+    ],
+  },
+  {
+    key: "consultations",
+    mode: "collection",
+    navGroup: "site",
+    navLabel: "طلبات الاستشارة",
+    fields: [
+      { key: "name", label: "الاسم", type: "plain", required: true },
+      { key: "phone", label: "الهاتف", type: "plain", required: true },
+      { key: "email", label: "البريد الإلكتروني", type: "plain" },
+      { key: "service", label: "الخدمة المطلوبة", type: "plain" },
+      { key: "note", label: "الملاحظات", type: "textarea" },
+      { key: "date", label: "تاريخ الطلب", type: "plain" }
     ],
   },
 ];

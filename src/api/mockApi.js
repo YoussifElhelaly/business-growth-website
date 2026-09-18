@@ -49,9 +49,16 @@ export async function fetchSiteContent(lang) {
  * Simulates submitting a consultation request to a backend API.
  */
 export async function submitConsultationRequest(payload) {
-  await delay(900);
   if (!payload?.name || !payload?.phone) {
     throw new Error("missing-required-fields");
   }
-  return { ok: true, receivedAt: new Date().toISOString() };
+  const res = await fetch(`${API_BASE_URL}/api/consultations`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload)
+  });
+  if (!res.ok) {
+    throw new Error("failed-to-submit");
+  }
+  return res.json();
 }

@@ -2,7 +2,7 @@ import { Photo } from "./Photo.jsx";
 
 export function PageHead({ title, kicker, lead, image }) {
   return (
-    <section className="relative flex min-h-[360px] items-end overflow-hidden rounded-xl bg-navy">
+    <section className="relative flex min-h-[360px] items-end overflow-hidden bg-navy">
       <Photo src={image} fill label="صورة الصفحة" />
       <div
         className="absolute inset-0"

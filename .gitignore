@@ -3,3 +3,8 @@ dist
 .DS_Store
 *.local
 .env
+
+# Database & Uploads
+server/data/database.sqlite*
+server/uploads/*
+!server/uploads/.gitkeep

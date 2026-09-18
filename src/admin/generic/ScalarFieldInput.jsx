@@ -1,5 +1,9 @@
 import { Input, Select, Textarea } from "../../design-system/index.js";
 import { ICON_OPTIONS } from "../iconOptions.js";
+import { ImageUploadField } from "./ImageUploadField.jsx";
+import { RichTextField } from "./RichTextField.jsx";
+import { IconPicker } from "./IconPicker.jsx";
+
 
 function CheckboxField({ label, checked, onChange }) {
   return (
@@ -12,10 +16,14 @@ function CheckboxField({ label, checked, onChange }) {
 
 export function ScalarFieldInput({ field, value, onChange, error, refOptions }) {
   switch (field.type) {
+    case "richtext":
+      return <RichTextField label={field.label} value={value || ""} onChange={onChange} error={error} required={field.required} />;
     case "textarea":
       return <Textarea label={field.label} rows={3} value={value || ""} onChange={onChange} error={error} required={field.required} />;
     case "icon":
-      return <Select label={field.label} options={ICON_OPTIONS} value={value || ""} onChange={onChange} error={error} required={field.required} />;
+      return <IconPicker label={field.label} value={value || ""} onChange={onChange} error={error} required={field.required} />;
+    case "image":
+      return <ImageUploadField label={field.label} value={value || ""} onChange={onChange} error={error} required={field.required} />;
     case "select-ref":
       return <Select label={field.label} options={refOptions || []} value={value || ""} onChange={onChange} error={error} required={field.required} />;
     case "checkbox":

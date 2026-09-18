@@ -1,4 +1,7 @@
+import { SEO } from "../components/site/SEO.jsx";
+
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Icon, Button, Reveal } from "../design-system/index.js";
 import { useSiteContent } from "../api/hooks.js";
@@ -16,6 +19,8 @@ export function BlogPage() {
 
   return (
     <main>
+      <SEO title={t("blog.pageHead.title")} />
+
       <PageHead kicker={t("blog.pageHead.kicker")} title={t("blog.pageHead.title")} lead={t("blog.pageHead.lead")} image={pictures.pageHead.blog} />
 
       <section className="sec-tight">
@@ -42,7 +47,7 @@ export function BlogPage() {
 
           {lead && (
             <Reveal className="mt-12">
-              <a href="#" onClick={(e) => e.preventDefault()} className="r-split grid items-center gap-[clamp(32px,4vw,64px)] text-inherit" style={{ gridTemplateColumns: "1.25fr 1fr" }}>
+              <Link to={`/blog/${lead.id}`} className="r-split grid items-center gap-[clamp(32px,4vw,64px)] text-inherit" style={{ gridTemplateColumns: "1.25fr 1fr" }}>
                 <Photo src={lead.image} ratio="16/10" zoom label={lead.cat} />
                 <div>
                   <div className="flex gap-[14px] text-xs font-semibold tracking-[.08em] text-copper-dark">
@@ -57,23 +62,29 @@ export function BlogPage() {
                     <Icon name="arrow-left" size={17} />
                   </div>
                 </div>
-              </a>
+              </Link>
             </Reveal>
           )}
 
           {rest.length > 0 && (
-            <div className="r-g3 mt-[72px] grid grid-cols-3 gap-8">
+            <div className="r-g3 mt-[72px] grid grid-cols-3 gap-[26px]">
               {rest.map((a, i) => (
-                <Reveal key={i} delay={i * 80}>
-                  <a href="#" onClick={(e) => e.preventDefault()} className="block text-inherit">
-                    <Photo src={a.image} ratio="3/2" zoom label={a.cat} />
-                    <div className="mt-[18px] flex gap-[14px] text-xs font-semibold tracking-[.08em] text-copper-dark">
-                      <span>{a.cat}</span>
-                      <span className="font-normal text-text-subtle">{a.date}</span>
+                <Reveal key={i} delay={i * 80} className="h-full">
+                  <Link to={`/blog/${a.id}`} className="group flex h-full flex-col border border-border-subtle bg-parchment text-inherit transition-all duration-300 hover:-translate-y-[5px] hover:border-copper hover:shadow-[0_16px_34px_-20px_rgba(35,41,58,.4)]">
+                    <Photo src={a.image} ratio="3/2" zoom label={a.cat} className="[filter:grayscale(.35)] transition-[filter] duration-[400ms] ease-out group-hover:grayscale-0" />
+                    <div className="flex flex-1 flex-col p-6">
+                      <div className="flex gap-[14px] text-xs font-bold text-copper">
+                        <span>{a.cat}</span>
+                        <span className="font-normal text-text-muted">{a.date}</span>
+                      </div>
+                      <h4 className="mt-[10px] font-display text-[18.5px] font-bold leading-[1.5] text-text-strong transition-colors duration-300 group-hover:text-copper">{a.title}</h4>
+                      <p className="mt-[10px] text-[14.5px] leading-[1.8] text-text-muted">{a.excerpt}</p>
+                      <span className="mt-auto flex items-center gap-2 pt-2 text-sm font-bold text-copper transition-[gap] duration-300 group-hover:gap-[13px]">
+                        {t("blog.readArticle")}
+                        <Icon name="arrow-left" size={16} />
+                      </span>
                     </div>
-                    <h4 className="mt-[10px] font-display text-[22px] font-bold leading-[1.4] text-text-strong">{a.title}</h4>
-                    <p className="mt-[10px] text-sm leading-[1.8] text-text-muted">{a.excerpt}</p>
-                  </a>
+                  </Link>
                 </Reveal>
               ))}
             </div>

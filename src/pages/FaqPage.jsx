@@ -1,3 +1,5 @@
+import { SEO } from "../components/site/SEO.jsx";
+
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "../design-system/index.js";
@@ -14,6 +16,8 @@ export function FaqPage() {
 
   return (
     <main>
+      <SEO title={t("faq.pageHead.title")} />
+
       <PageHead kicker={t("faq.pageHead.kicker")} title={t("faq.pageHead.title")} lead={t("faq.pageHead.lead")} image={pictures.pageHead.faq} />
 
       <section className="sec">

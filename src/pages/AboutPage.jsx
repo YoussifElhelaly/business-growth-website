@@ -1,3 +1,5 @@
+import { SEO } from "../components/site/SEO.jsx";
+
 import { useTranslation } from "react-i18next";
 import { Icon, Button, Reveal } from "../design-system/index.js";
 import { useSiteContent } from "../api/hooks.js";
@@ -15,6 +17,8 @@ export function AboutPage() {
 
   return (
     <main>
+      <SEO title={t("about.pageHead.title")} />
+
       <PageHead
         kicker={t("about.pageHead.kicker")}
         title={t("about.pageHead.title")}
@@ -53,11 +57,12 @@ export function AboutPage() {
           <SectionHead kicker={t("about.values.kicker")} title={t("about.values.title")} max={520} />
           <div className="r-g4 mt-12 grid grid-cols-4 gap-px bg-sand-deep">
             {content.values.map((v, i) => (
-              <Reveal key={i} delay={i * 90} className="bg-parchment px-[30px] py-9">
-                <span className="flex h-[50px] w-[50px] items-center justify-center bg-navy text-green">
+              <Reveal key={i} delay={i * 90} className="group relative bg-parchment px-[30px] py-9 transition-colors duration-300 hover:bg-sand">
+                <span className="absolute inset-x-0 bottom-0 h-[3px] origin-left scale-x-0 bg-copper transition-transform duration-300 ease-out group-hover:scale-x-100" />
+                <span className="flex h-[50px] w-[50px] items-center justify-center bg-navy text-green transition-colors duration-300 group-hover:bg-copper group-hover:text-white">
                   <Icon name={v.icon} size={24} />
                 </span>
-                <h4 className="mt-[18px] font-display text-[22px] font-bold text-text-strong">{v.title}</h4>
+                <h4 className="mt-[18px] font-display text-[22px] font-bold text-text-strong transition-colors duration-300 group-hover:text-copper-dark">{v.title}</h4>
                 <p className="mt-2 text-sm leading-[1.8] text-text-muted">{v.description}</p>
               </Reveal>
             ))}

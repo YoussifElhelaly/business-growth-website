@@ -1,4 +1,6 @@
-import { useNavigate } from "react-router-dom";
+import { SEO } from "../components/site/SEO.jsx";
+
+import { useNavigate, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { Icon, Button, Reveal } from "../design-system/index.js";
@@ -11,6 +13,7 @@ import { CTABand } from "../components/site/CTABand.jsx";
 
 function ServiceRow({ s, i }) {
   const { t } = useTranslation();
+  const dispatch = useDispatch();
   const flip = i % 2 === 1;
   return (
     <Reveal>
@@ -40,9 +43,12 @@ function ServiceRow({ s, i }) {
               </li>
             ))}
           </ul>
-          <div className="mt-[30px]">
-            <Button variant="secondary" size="sm" iconEnd="arrow-left" to="/contact">
-              {t("common.requestService")}
+          <div className="mt-[30px] flex gap-[14px]">
+            <Button size="sm" iconEnd="arrow-left" onClick={() => dispatch(openRequestDialog(s.title))}>
+              {t("common.requestService", "طلب الخدمة")}
+            </Button>
+            <Button variant="secondary" size="sm" to={`/services/${s.id}`}>
+              {t("common.details", "التفاصيل")}
             </Button>
           </div>
         </div>
@@ -59,6 +65,8 @@ export function ServicesPage() {
 
   return (
     <main>
+      <SEO title={t("services.pageHead.title")} />
+
       <PageHead
         kicker={t("services.pageHead.kicker")}
         title={t("services.pageHead.title")}
@@ -69,16 +77,17 @@ export function ServicesPage() {
       <section className="sec-tight">
         <div className="wrap r-g6 grid grid-cols-6 gap-px bg-sand-deep">
           {content.services.map((s, i) => (
-            <button
+            <Link
               key={i}
-              onClick={() => dispatch(openRequestDialog(s.title))}
-              className="cursor-pointer bg-parchment px-[18px] py-[26px] text-start transition-colors duration-base hover:bg-sand"
+              to={`/services/${s.id}`}
+              className="group relative cursor-pointer bg-parchment px-[18px] py-[26px] text-start transition-colors duration-base hover:bg-sand"
             >
-              <span className="flex h-11 w-11 items-center justify-center bg-navy text-green">
+              <span className="absolute inset-x-0 bottom-0 h-[3px] origin-left scale-x-0 bg-copper transition-transform duration-300 ease-out group-hover:scale-x-100" />
+              <span className="flex h-11 w-11 items-center justify-center bg-navy text-green transition-colors duration-300 group-hover:bg-copper group-hover:text-white">
                 <Icon name={s.icon} size={21} />
               </span>
-              <span className="mt-[14px] block text-[15px] font-semibold leading-[1.5] text-text-strong">{s.title}</span>
-            </button>
+              <span className="mt-[14px] block text-[15px] font-semibold leading-[1.5] text-text-strong transition-colors duration-300 group-hover:text-copper-dark">{s.title}</span>
+            </Link>
           ))}
         </div>
       </section>
@@ -92,8 +101,8 @@ export function ServicesPage() {
           <SectionHead kicker={t("services.sectors.kicker")} title={t("services.sectors.title")} onDark max={540} />
           <div className="r-g6 mt-12 grid grid-cols-6 gap-px bg-white/10">
             {content.sectors.map((x, i) => (
-              <div key={i} className="flex flex-col gap-[14px] bg-navy px-[22px] py-[30px]">
-                <span className="flex text-green-400">
+              <div key={i} className="group flex flex-col gap-[14px] bg-navy px-[22px] py-[30px] transition-all duration-300 hover:bg-white/5">
+                <span className="flex text-green-400 transition-transform duration-300 group-hover:scale-110">
                   <Icon name={x.icon} size={24} />
                 </span>
                 <span className="text-[15px] font-medium text-text-on-dark">{x.label}</span>

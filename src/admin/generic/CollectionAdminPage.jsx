@@ -3,18 +3,18 @@ import { Button, Icon, IconButton } from "../../design-system/index.js";
 import { useCollection, useDeleteItem, useReorderItems } from "./genericHooks.js";
 import { CollectionFormDialog } from "./CollectionFormDialog.jsx";
 import { ConfirmDialog } from "../ConfirmDialog.jsx";
+import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 
 function rowTitle(item, resource) {
   const field = resource.simpleList ? "value" : resource.itemLabelField;
+  if (!field) return { ar: "عنصر", en: "" };
   const bilingual = item[field];
-  return { ar: bilingual?.ar || "", en: bilingual?.en || "" };
+  return { ar: bilingual?.ar || bilingual || "", en: bilingual?.en || "" };
 }
 
 function useRefOptions(resource) {
   const refFields = resource.fields.filter((f) => f.type === "select-ref");
   const refKeys = [...new Set(refFields.map((f) => f.refKey))];
-  // Fixed, small set of possible ref keys across the whole registry — calling
-  // the hook conditionally per key keeps this simple without a dynamic hook list.
   const faqCats = useCollection("faqCats");
   const blogCats = useCollection("blogCats");
   const sources = { faqCats, blogCats };
@@ -38,12 +38,17 @@ export function CollectionAdminPage({ resource }) {
 
   const hasIcon = resource.fields.some((f) => f.key === "icon" && f.type === "icon");
 
-  const move = (index, dir) => {
-    if (!items) return;
-    const target = index + dir;
-    if (target < 0 || target >= items.length) return;
-    const next = [...items];
-    [next[index], next[target]] = [next[target], next[index]];
+  const handleDragEnd = (result) => {
+    if (!result.destination || !items) return;
+    const sourceIndex = result.source.index;
+    const destIndex = result.destination.index;
+    if (sourceIndex === destIndex) return;
+
+    const next = Array.from(items);
+    const [removed] = next.splice(sourceIndex, 1);
+    next.splice(destIndex, 0, removed);
+    
+    // Update server with new array of IDs
     reorder.mutate(next.map((it) => it.id));
   };
 
@@ -63,31 +68,55 @@ export function CollectionAdminPage({ resource }) {
       {isLoading ? (
         <p className="mt-8 text-text-muted">جارِ التحميل…</p>
       ) : (
-        <div className="mt-6 flex flex-col bg-white">
-          {items.map((item, i) => {
-            const title = rowTitle(item, resource);
-            return (
-              <div key={item.id} className="flex items-center gap-4 border-b border-border-subtle px-5 py-4 last:border-0">
-                {hasIcon && (
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center bg-navy text-green">
-                    <Icon name={item.icon} size={18} />
-                  </span>
-                )}
-                <div className="flex-1">
-                  <p className="font-semibold text-text-strong">{title.ar}</p>
-                  {title.en && <p className="text-sm text-text-muted">{title.en}</p>}
-                </div>
-                <div className="flex items-center gap-1">
-                  <IconButton name="chevron-up" label="تحريك للأعلى" onClick={() => move(i, -1)} className={i === 0 ? "opacity-30" : ""} />
-                  <IconButton name="chevron-down" label="تحريك للأسفل" onClick={() => move(i, 1)} className={i === items.length - 1 ? "opacity-30" : ""} />
-                  <IconButton name="edit" label="تعديل" onClick={() => setFormState({ item })} />
-                  <IconButton name="trash" label="حذف" onClick={() => setDeleteTarget(item)} />
-                </div>
+        <DragDropContext onDragEnd={handleDragEnd}>
+          <Droppable droppableId="collection-list">
+            {(provided) => (
+              <div 
+                className="mt-6 flex flex-col bg-white" 
+                {...provided.droppableProps} 
+                ref={provided.innerRef}
+              >
+                {items.map((item, i) => {
+                  const title = rowTitle(item, resource);
+                  return (
+                    <Draggable key={item.id} draggableId={item.id} index={i}>
+                      {(provided, snapshot) => (
+                        <div
+                          ref={provided.innerRef}
+                          {...provided.draggableProps}
+                          className={`flex items-center gap-4 border-b border-border-subtle px-5 py-4 last:border-0 ${snapshot.isDragging ? 'bg-sand shadow-lg z-50' : 'bg-white'}`}
+                        >
+                          <div 
+                            {...provided.dragHandleProps} 
+                            className="cursor-grab hover:text-copper active:cursor-grabbing text-text-muted p-2 -ms-2"
+                          >
+                            <Icon name="grip-vertical" size={20} />
+                          </div>
+                          
+                          {hasIcon && (
+                            <span className="flex h-10 w-10 shrink-0 items-center justify-center bg-navy text-green">
+                              <Icon name={item.icon || "file"} size={18} />
+                            </span>
+                          )}
+                          <div className="flex-1">
+                            <p className="font-semibold text-text-strong">{title.ar || "بدون عنوان"}</p>
+                            {title.en && <p className="text-sm text-text-muted">{title.en}</p>}
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <IconButton name="edit" label="تعديل" onClick={() => setFormState({ item })} />
+                            <IconButton name="trash" label="حذف" onClick={() => setDeleteTarget(item)} />
+                          </div>
+                        </div>
+                      )}
+                    </Draggable>
+                  );
+                })}
+                {provided.placeholder}
+                {items.length === 0 && <p className="px-5 py-8 text-center text-text-muted">لا توجد عناصر بعد</p>}
               </div>
-            );
-          })}
-          {items.length === 0 && <p className="px-5 py-8 text-center text-text-muted">لا توجد عناصر بعد</p>}
-        </div>
+            )}
+          </Droppable>
+        </DragDropContext>
       )}
 
       <CollectionFormDialog
@@ -101,7 +130,7 @@ export function CollectionAdminPage({ resource }) {
       <ConfirmDialog
         open={Boolean(deleteTarget)}
         title="حذف العنصر"
-        body={deleteTarget ? `هل أنت متأكد من حذف "${rowTitle(deleteTarget, resource).ar}"؟ لا يمكن التراجع عن هذا الإجراء.` : ""}
+        body={deleteTarget ? `هل أنت متأكد من حذف "${rowTitle(deleteTarget, resource).ar || "العنصر"}"؟ لا يمكن التراجع عن هذا الإجراء.` : ""}
         confirmLabel="حذف"
         pending={deleteMutation.isPending}
         onConfirm={confirmDelete}
