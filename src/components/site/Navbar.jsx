@@ -41,9 +41,9 @@ export function Navbar() {
         style={{ height: scrolled ? 0 : 40, opacity: scrolled ? 0 : 1 }}
       >
         <div className="wrap flex h-10 items-center gap-7 whitespace-nowrap">
-          <a href={`tel:${content?.contact.phone.replace(/\s/g, "")}`} className="inline-flex items-center gap-2 text-inherit">
+          <a href={content?.contact?.phone ? `tel:${content.contact.phone.replace(/\s/g, "")}` : "#"} className="inline-flex items-center gap-2 text-inherit">
             <Icon name="phone" size={14} />
-            <span className="num">{content?.contact.phone}</span>
+            <span className="num">{content?.contact?.phone}</span>
           </a>
           <a href={`mailto:${content?.contact.email}`} className="topbar-extra inline-flex items-center gap-2 text-inherit">
             <Icon name="mail" size={14} />
