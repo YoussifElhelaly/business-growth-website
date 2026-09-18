@@ -17,6 +17,14 @@ services:
       # Map the uploads directory to a persistent Docker volume
       - bg_uploads:/app/server/uploads
 
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: bg-tunnel
+    restart: unless-stopped
+    command: tunnel --url http://app:4001
+    depends_on:
+      - app
+
 volumes:
   bg_data:
   bg_uploads:
